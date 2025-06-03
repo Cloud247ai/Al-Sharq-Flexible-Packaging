@@ -1,0 +1,2455 @@
+<!-- < ?php
+define("NITROPACK_HOME_URL", "https://www.purityflexpack.com/"); 
+define("NITROPACK_SITE_ID", "ZREXmWjxgjhVCAAkkolHnyAVtzGJBCEL"); 
+define("NITROPACK_SITE_SECRET", "Gt1s9P39J2RhyBEvK5QAsxYO0CykUQC5c0BNOKmRXQYo8CtEvKAOkAZL2iOUO4SD"); 
+include_once "nitropack-sdk/bootstrap.php";
+
+
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.purityflexpack.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 04:47:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="Purity Flex Pack">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords"
+        content="Confectionery & Dry Food Stuffs Packaging, Zipper Pouches, Food Packaging Pouches, Packaging for Special Applications, Pharmaceutical Packaging Material, Pouches, Agro Products Packaging, Purity Flexpack Limited, Vadodara">
+    <meta name="description" content="Purity Flex Pack">
+
+    <!-- title  -->
+    <title>Purity Flex Pack</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/webp" href="img/logos/favicon.webp">
+
+    <!-- bootstrap -->
+    <link rel="preload stylesheet" href="css/bootstrap.min.css">
+
+    <!-- plugins -->
+    <link rel="preload stylesheet" href="css/plugins.css">
+
+    <!-- quform css -->
+    <!-- <link rel="stylesheet" href="quform/css/base.css"> -->
+
+    <!-- theme core css -->
+    <link href="css/styles.css" rel="preload stylesheet">
+    <link href="css/slick-theme.css" rel="preload stylesheet" />
+
+    <!-- Slick -->
+    <link rel="preload stylesheet" href="css/swiper.min.css">
+    <link rel="preload stylesheet" href="css/shortcode.css">
+
+    <!-- Popup Modal & Sidebar -->
+    <link rel="preload stylesheet" type="text/css" href="css/sidebar-btn.css">
+    <link rel="preload stylesheet" type="text/css" href="css/model-custom.css">
+
+    <!-- Tabs -->
+    <link href="tab/css/tab.css" rel="preload stylesheet" />
+    <link rel="preload" href="font/RageItalic.html" as="font" type="font/woff2" crossorigin>
+    <style>
+    header {
+        position: relative;
+        background: none;
+        z-index: 1049;
+    }
+
+    .big-header-container {
+        /* overflow: hidden; */
+    }
+
+    .top-position1 {
+        margin-top: -217px
+    }
+    @media screen and (max-width: 768px) {
+        .top-position1 {
+        margin-top: -100px
+    }
+    }
+    .big-header-items {
+        justify-content: end;
+        width: 100%;
+        height: auto;
+        position: relative;
+        /* overflow: hidden; */
+        /* background:#e6e7e8; */
+        background: rgba(255, 255, 255, 45%)
+    }
+
+    .big-header-items::before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        left: 8.5%;
+        top: 0px;
+        background: #393185;
+        transform: skewX(25deg);
+    }
+
+    .big-header-items::after {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        left: 5.1%;
+        top: 0px;
+        background: #939598;
+        transform: skewX(25deg);
+        box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 22%);
+    }
+
+    .big-header {
+        width: 100%;
+        display: block;
+        text-align: right
+    }
+
+    .big-header .big-header-logo {
+        width: 100%;
+        position: relative;
+    }
+
+    .big-header-logo::before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        left: 1.5%;
+        top: 0px;
+        background: #393185;
+        transform: skewX(25deg);
+        box-shadow: 0px -3px 13px rgba(0, 0, 0, 30%);
+    }
+
+    .big-header .big-header-menu {
+        justify-content: end;
+        width: 100%;
+        height: auto;
+        /* background:#393185; */
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .big-header .big-header-menu::before {
+        content: '';
+        position: absolute;
+        width: 86%;
+        height: 70px;
+        right: 18px;
+        top: 0px;
+        background: #393185;
+        transform: skewX(25deg);
+    }
+
+    .big-header .big-header-menu>li {
+        background: #393185;
+    }
+
+    .big-header .big-header-menu>li>a {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 21px 2.3rem;
+        color: #FFF !important;
+        letter-spacing: 0.8px;
+        -webkit-transition-duration: 500ms;
+        -o-transition-duration: 500ms;
+        transition-duration: 500ms;
+        text-transform: uppercase;
+    }
+
+    .big-header .big-header-menu .has-sub>a:after {
+        border-color: transparent #FFF #FFF transparent !important;
+    }
+
+    .big-header .big-header-menu>li>a:last-child {
+        padding: 21px 2.3rem;
+    }
+
+    .banner-main {
+        height: 101%;
+    }
+
+    .scrollHeader .big-header-items::before,
+    .scrollHeader .big-header-items::after {
+        height: 100%;
+    }
+
+    .scrollHeader .big-header .big-header-menu::before {
+        height: 69px
+    }
+
+    .big-header .big-header-menu>li.has-sub:hover>ul {
+        margin-top: 0px;
+        top: 69px;
+    }
+
+    .progress-container {
+        bottom: 9px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .big-header {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .big-header-items::after,
+        .big-header-items::before,
+        .big-header-logo::before,
+        .big-header-logo::before {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+    (function(w, d, s, l, i) {
+
+        w[l] = w[l] || [];
+
+        w[l].push({
+
+            'gtm.start': new Date().getTime(),
+
+            event: 'gtm.js'
+
+        });
+
+        var f = d.getElementsByTagName(s)[0],
+
+            j = d.createElement(s),
+
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+
+        j.async = true;
+
+        j.src =
+
+            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+
+        f.parentNode.insertBefore(j, f);
+
+    })(window, document, 'script', 'dataLayer', 'GTM-5CJF5Q3');
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+
+
+    function gtag() {
+
+        dataLayer.push(arguments);
+
+    }
+    </script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CJF5Q3" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    
+<div class="sticklist">
+    <input type="hidden" id="ismobile" value="0">
+    <button class="open-close-arrow">
+        <span class="open-arrow"><i class="fa fa-chevron-right"></i></span>
+        <span class="close-arrow"><i class="fa fa-chevron-left"></i></span>
+    </button>
+    <ul>
+        <li class="none-li inquiery-icon  imgnone">
+            <a href="javascript:;" class="click1">
+                <span class="icon1"> <i class="fa fa-envelope"></i></span> <span class="btn-text"> Send Inquiry</span>
+            </a>
+        </li>
+        <!-- <li class="download-pdf none-li inquiery-icon  imgnone">
+            <a href="javascript:;" class="click2">
+                <span class="icon"> <i class="fa fa-file-pdf-o"></i></span> <span class="btn-text">Catalogue</span>
+            </a>
+        </li> -->
+        <li class="whataspp-icon none-li imgnone">
+            <a onclick="gtag('event', 'send', { 'event_category': 'click on whatsapp', 'event_action': 'Mobile', 'event_label': '+919925058428' });"
+                href="https://api.whatsapp.com/send?phone=919925058428&amp;text=Hello%20Team%20Purity%20Flexpack%20Limited,%20I%20was%20going%20through%20your%20website%20and%20wish%20to%20get%20connected%20for%20product%20discussion" target="_blank">
+                <span class="icon1"> <i class="fab fa-whatsapp"></i></span> <span class="btn-text"> Whatsapp</span></a>
+        </li>
+    </ul>
+</div>
+<div class="modal fade bs-example-modal-sm cstm-modal-top-header my-custom-modal" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true" id="onload">
+    <div class="modal-dialog modal-lg">
+        <input type="hidden" id="ispopupopen" value="1">
+        <div class="modal-content">
+            <div class="modal-body stick_popup">
+                <h5 class="modal-title">Get Your Free Quote…!</h5>
+                <div class="stick_close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></div>
+                <div class="row mt-40">
+                    <div class="col-md-6 col-sm-12 col-xs-12 leftsideimg">
+                        <div class="logo-wrapper">
+                            <img src="img/inquiry-box.webp" class="mb-3">
+                            <!-- <h3 class="text-center headerh3"><b>For Domestic</b></h3>
+                            <button class="btn-modal-gra">
+                                <a class="content-p" href="tel:+919925058428"
+                                    onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 99250 58428' });">
+                                    <b>+91 99250 58428</b>
+                                </a><br>
+                                <a class="content-p" href="mailto:purity@purityflexpack.com"
+                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });"><b>purity@purityflexpack.com</b></a><br><a
+                                    class="content-p" href="mailto:marketing@purityflexpack.com"
+                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing@purityflexpack.com' });"><b>marketing@purityflexpack.com</b></a><br><a
+                                    class="content-p" href="mailto:marketing2@purityflexpack.com"
+                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });"><b>marketing2@purityflexpack.com</b></a>
+                            </button>
+                            <h3 class="text-center headerh3 mt-3"><b>For Export</b></h3>
+                            <button class="btn-modal-gra">
+                                <a class="content-p" href="tel:+919099026544"
+                                    onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 90990 26544' });">
+                                    <b>+91 90990 26544</b>
+                                </a><br>
+                                <a class="content-p" href="mailto:export@purityflexpack.com"
+                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });"><b>export@purityflexpack.com</b></a> -->
+                                <!--<br><a-->
+                                <!--class="content-p" href="mailto:sales@purityflexpack.com"-->
+                                <!--onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales@purityflexpack.com' });"><b>sales@purityflexpack.com</b></a>-->
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="footer-widgets tag-widget">
+                            <input id="inquiery-model" value="" type="hidden" />
+                            <input id="isloadopenmodel" value="" type="hidden" />
+                            <input name="junk_trap" class="junk_trap" type="hidden" />
+                            <form class="form-horizontal form1" action="https://www.purityflexpack.com/inquiry-action.php" method="post"
+                                novalidate="novalidate">
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <input name="name" id="name" type="text" placeholder="Name"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <input name="email" id="email" type="text" placeholder="E-Mail Address"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <input name="cname" id="cname" type="text" placeholder="Company Name"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback class-feedback">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
+                                                <select id="country" name="country" class="form-control"></select>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 mybottom" style="display: none;">
+                                                <select name="code" id="state" class="form-control"
+                                                    style="padding-right: 0;color: #999;">
+                                                    <option value="">+00</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <input name="number" id="number" type="tel" placeholder="Phone" maxlength="15"
+                                            minlength="8" class="form-control number21">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <input name="products" id="products" type="text" placeholder="Which kind of products do you want to pack?"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback class-feedback">
+                                    <div class="col-md-12">
+                                        <select id="packagingtype" name="packagingtype"
+                                            class="form-control packagingtype">
+                                            <option value="">Select interested packaging type</option>
+                                            <option value="Packaging Rolls">Packaging Rolls</option>
+                                            <option value="Standard Pouches">Standard Pouches</option>
+                                            <option value="Speciality Pouches">Speciality Pouches</option>
+                                            <option value="Shrink Sleeves">Shrink Sleeves</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback class-feedback packaging_rolls_type d-none subcategories">
+                                    <div class="col-md-12">
+                                        <select id="packaging_rolls_type" name="packaging_rolls_type"
+                                            class="form-control">
+                                            <option value="">Select packaging rolls</option>
+                                            <option value="Packaging Rolls">Multi-layer Adhesive Lamination Roll
+                                            </option>
+                                            <option value="Co-extrusion Lamination Roll">Co-extrusion Lamination Roll
+                                            </option>
+                                            <option value="Stick Pack lamination Roll">Stick Pack lamination Roll
+                                            </option>
+                                            <option value="Cold Seal Packaging Roll">Cold Seal Packaging Roll</option>
+                                            <option value="Wrap Around BOPP Label Rolls">Wrap Around BOPP Label Rolls
+                                            </option>
+                                            <option value="HFFS/ VFFS/ Flow Wrap Roll">HFFS/ VFFS/ Flow Wrap Roll
+                                            </option>
+                                            <option value="Paper based Lamination Roll">Paper based Lamination Roll
+                                            </option>
+                                            <option value="Lidding Lamination">Lidding Lamination</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback class-feedback standard_pouches_type d-none subcategories">
+                                    <div class="col-md-12">
+                                        <select id="standard_pouches_type" name="standard_pouches_type"
+                                            class="form-control">
+                                            <option value="">Select standard pouches</option>
+                                            <option value="Central Seal/ Pillow Pouch">Central Seal/ Pillow Pouch
+                                            </option>
+                                            <option value="Three Side Seal Pouch">Three Side Seal Pouch</option>
+                                            <option value="Stand Up Pouch / Doy Pack">Stand Up Pouch / Doy Pack</option>
+                                            <option value="Side Gusset Central Seal Pouch">Side Gusset Central Seal
+                                                Pouch</option>
+                                            <option value="Quad Seal Pouch">Quad Seal Pouch</option>
+                                            <option value="Penta Seal Pouch">Penta Seal Pouch</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback class-feedback speciality_pouches_type d-none subcategories">
+                                    <div class="col-md-12">
+                                        <select id="speciality_pouches_type" name="speciality_pouches_type"
+                                            class="form-control">
+                                            <option value="">Select speciality pouches</option>
+                                            <option value="Retort Pouches">Retort Pouches
+                                            </option>
+                                            <option value="Spouted Pouch">Spouted Pouch</option>
+                                            <option value="De-gassing Valve Pouch">De-gassing Valve Pouch</option>
+                                            <option value="Flat-bottom Pouch">Flat-bottom Pouch</option>
+                                            <option value="4 Side Flat Box Pouch">4 Side Flat Box Pouch</option>
+                                            <option value="Vacuum Pouch">Vacuum Pouch</option>
+                                            <option value="Shaped Pouch">Shaped Pouch
+
+</option>
+                                            <option value="Heavy Duty Bags">Heavy Duty Bags</option>
+                                            <option value="Pocket Zipper Pouch">Pocket Zipper Pouch</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback class-feedback">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
+                                                <select id="quantity" name="quantity" class="form-control" style="color: #999;">
+                                                    <option value="">Required quantity</option>
+                                                    <option value="less then 10,000 units">less then 10,000 units
+                                                    </option>
+                                                    <option value="10,000 - 20,000 units">10,000 - 20,000 units</option>
+                                                    <option value="20,000 - 40,000 units">20,000 - 40,000 units</option>
+                                                    <option value="40,000+ units">40,000+ units</option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <textarea class="form-control" name="message" id="message"
+                                            placeholder="Describe your requirements"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-8 col position-relative">
+                                                <input name="captcha" id="captcha" placeholder="Captcha Code"
+                                                    class="form-control" type="text">
+                                            </div>
+                                            <div class="col-md-4 col">
+                                                <img src="captcha.png" class="capside">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-md-12 col-sm-3 col-xs-12">
+                                        <input name="submit" class="submit submitbutton" type="submit"
+                                            value="Submit Now!">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- End My Model -->
+<!-- catelog model -->
+<!-- <div class="modal fade bs-example-modal-sm cstm-modal-top-header my-custom-modal" tabindex="-1" role="dialog"
+aria-labelledby="myLargeModalLabel" aria-hidden="true" id="onload1">
+<div class="modal-dialog modal-sm">
+<div class="modal-content">
+    <div class="modal-body ">
+        <h5 class="modal-title">Catalogue Request Form…!</h5>
+        <div class="stick_close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></div>
+        <div class="row mt-40">
+            <div class="col-md-5 col-sm-12 col-xs-12">
+                <div class="logo-wrapper">
+                    <img src="img/logos/logo.png">
+                    <h3 class="text-center headerh3"><b>For Domestic</b></h3>
+                    <button class="btn-modal-gra">
+                    <a class="content-p" href="tel:+91 99250 58428"
+                        onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 99250 58428' });">
+                        <b>+91 99250 58428</b>
+                    </a><br>
+                    <a class="content-p" href="mailto:purity@purityflexpack.com"
+                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });"><b>purity@purityflexpack.com</b></a><br><a
+                    class="content-p" href="mailto:marketing@purityflexpack.com"
+                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing@purityflexpack.com' });"><b>marketing@purityflexpack.com</b></a><br><a
+                class="content-p" href="mailto:marketing2@purityflexpack.com"
+            onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });"><b>marketing2@purityflexpack.com</b></a>
+            </button>
+            <h3 class="text-center headerh3"><b>For Export</b></h3>
+            <button class="btn-modal-gra">
+            <a class="content-p" href="tel:+91 90990 26544"
+                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 90990 26544' });">
+                <b>+91 90990 26544</b>
+            </a><br>
+            <a class="content-p" href="mailto:export@purityflexpack.com"
+            onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });"><b>export@purityflexpack.com</b></a><br><a
+            class="content-p" href="mailto:sales@purityflexpack.com"
+        onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales@purityflexpack.com' });"><b>sales@purityflexpack.com</b></a>
+        </button>
+    </div>
+</div>
+<div class="col-md-7 col-sm-7 col-xs-12">
+    <div class=" footer-widgets tag-widget formtop">
+        <form class="form-horizontal form2" action="catalogue-action.php" method="post">
+            <div class="form-group has-feedback">
+                <div class="col-md-12">
+                    <input name="name" id="name2" type="text" placeholder="Name"
+                    class="form-control">
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <div class="col-md-12">
+                    <input name="email" id="email2" type="text" placeholder="E-Mail Address"
+                    class="form-control">
+                </div>
+            </div>
+            <div class="form-group has-feedback class-feedback">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
+                        <select id="country1" name="country" class="form-control"></select>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 mybottom" style="display: none;">
+                        <select name="code" id="state1" class="form-control"
+                            style="padding-right: 0;color: #999;">
+                            <option value="">+00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <div class="col-md-12">
+                <input name="number" id="number2" type="tel" placeholder="Phone" maxlength="10"
+                minlength="8" class="form-control number21">
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8 position-relative">
+                        <input name="captcha" id="captcha2" placeholder="Captcha Code"
+                        class="form-control" type="text">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="captcha.php" class="capside">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-8 inputGroupContainer">
+                <div class="input-group inline4">
+                    <input type="hidden" id="pt" name="path" value="">
+                </div>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <div class="col-md-12 col-sm-3 col-xs-12">
+                <input name="submit2" id="submit2" class="submit submitbutton" type="submit"
+                value="Download Now">
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+<!-- end catelog model -->
+<div class="footer-box" style="display: none;">
+    <div class="book-app" style="background:#393185;" id="req-apnmt2">
+        <a class="nav_up click1" href="javascript:;" style="color:#FFF; font-size:12px;font-weight:600;"><i
+                class="fa fa-envelope" style="margin-right: 5px;"></i> Enquire Now</a>
+    </div>
+    <!-- <div class="book-app" style="background: #222;">
+<a class="nav_up click2" href="javascript:;" style="color:#FFF; font-size:12px;font-weight:600;"><i
+class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> Catalogue</a>
+</div> -->
+    <div class="book-app" style="background: #2db640;">
+        <a onclick="gtag('event', 'send', { 'event_category': 'click on whatsapp', 'event_action': 'Mobile', 'event_label': '+919925058428' });"
+            href="https://api.whatsapp.com/send?phone=919925058428&amp;text=Hello%20Team%20Purity%20Flexpack%20Limited,%20I%20was%20going%20through%20your%20website%20and%20wish%20to%20get%20connected%20for%20product%20discussion" target="_blank"
+            style="color:#FFF; font-size:12px;font-weight:600;"><i class="fa fa-whatsapp"
+                style="margin-right: 5px;"></i> Whatsapp</a>
+    </div>
+</div>
+
+<!-- End My Model -->    <!-- MAIN WRAPPER
+    ================================================== -->
+    <div class="main-wrapper">
+
+        <!-- HEADER
+        ================================================== -->
+        <header class="header-style1 menu_area-light big-header-container">
+
+            <div class="navbar-default border-bottom border-color-light-white">
+
+                <div class="container-fluid ps-0 pe-0">
+                    <div class="align-items-center">
+                        <div class="menu_area alt-font big-header-items">
+                            <nav class="navbar navbar-expand-lg navbar-light p-0 big-header">
+                                <div class="navbar-header navbar-header-custom big-header-logo">
+                                    <!-- start logo -->
+                                    <a href="index-2.html" class="navbar-brand"><img loading="lazy" id="logo" src="img/logos/logo.webp"
+                                            alt="logo" /></a>
+                                    <!-- end logo -->
+                                </div>
+
+                                <div class="navbar-toggler bg-primary"></div>
+
+                                <!-- start menu area -->
+                                <ul class="navbar-nav ms-auto big-header-menu" id="nav" style="display: none;">
+                                    <!-- <li><a href="index.php">Home</a></li> -->
+                                    <li><a href="index-2.html">Home</a></li>
+                                    <li>
+                                        <a href="products.html">Products</a>
+                                        <ul class="submenu-full">
+                                            <li>
+                                                <div class="row submenu-title">
+                                                    <div class="col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-lg-3">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="printed-unprinted-roll-stock.html">Printed
+                                                                            / Unprinted Roll Stock</a></h2>
+                                                                    <ul>
+                                                                        <li><a
+                                                                                href="multi-layer-adhesive-lamination-roll.html">Multi-layer
+                                                                                Adhesive Lamination Roll</a></li>
+                                                                        <li><a href="co-extrusion-lamination-roll.html">Co-extrusion
+                                                                                Lamination Roll</a></li>
+                                                                        <li><a href="stick-pack-lamination-roll.html">Stick
+                                                                                Pack lamination Roll</a></li>
+                                                                        <!-- <li><a href="cold-seal-packaging-roll.php">Cold Seal Packaging Roll</a></li> -->
+                                                                        <li><a href="wrap-around-bopp-lables-roll.html">Wrap
+                                                                                Around BOPP Label Rolls</a></li>
+                                                                        <li><a href="hffs-vffs-flow-wrap-roll.html">HFFS/
+                                                                                VFFS/ Flow Wrap Roll</a></li>
+                                                                        <li><a href="paper-based-lamination-roll.html">Paper
+                                                                                based Lamination Roll</a></li>
+                                                                        <li><a href="lidding-lamination.html">Lidding
+                                                                                Lamination</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="conventional-pouch.html">Standard
+                                                                            Pouch</a></h2>
+                                                                    <ul>
+                                                                        <li><a href="central-seal-pillow-pouch.html">Central
+                                                                                Seal/ Pillow Pouch</a></li>
+                                                                        <li><a href="three-side-seal-pouch.html">Three
+                                                                                Side Seal Pouch</a></li>
+                                                                        <li><a href="stand-up-zipper-pouch.html">Stand Up
+                                                                                Pouch / Doy Pack</a></li>
+                                                                        <li><a
+                                                                                href="side-gusset-central-seal-pouch.html">Side
+                                                                                Gusset Central Seal Pouch</a></li>
+                                                                        <li><a href="quad-seal-pouch.html">Quad Seal
+                                                                                Pouch</a></li>
+                                                                        <li><a href="penta-seal-pouch.html">Penta Seal
+                                                                                Pouch</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="speciality-pouch.html">Speciality
+                                                                            Application Pouch</a></h2>
+                                                                    <ul>
+                                                                        <li><a href="retort-pouches.html">Retort
+                                                                                Pouch</a></li>
+                                                                        <li><a href="spouted-pouches.html">Spouted
+                                                                                Pouch</a></li>
+                                                                        <li><a href="degassing-valve-pouches.html">De-gassing
+                                                                                Valve Pouch</a></li>
+                                                                        <li><a href="flat-bottom-pouches.html">Flat-bottom
+                                                                                Pouch</a></li>
+                                                                        <!-- <li class="ps-3"><a href="3-side-flat-bottom-pouch.php">3 Side Flat Bottom Pouch</a></li> -->
+                                                                        <li><a href="4-side-flat-box-pouch.html">4 Side
+                                                                                Flat Box Pouch</a></li>
+                                                                        <li><a href="vacuum-pouches.html">Vacuum
+                                                                                Pouch</a></li>
+                                                                        <li><a href="shaped-pouches.html">Shaped
+                                                                                Pouch</a></li>
+                                                                        <li><a href="heavy-duty-bags.html">Heavy Duty
+                                                                                Bags</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="add-on-feature.html">Add-on(s)</a></h2>
+                                                                    <ul>
+                                                                        <li><a href="add-on-feature.html">Tear Notch</a>
+                                                                        </li>
+                                                                        <li><a href="add-on-feature.html">Child Resistant
+                                                                                Zipper</a></li>
+                                                                        <li><a href="add-on-feature.html">D Cut/Hang
+                                                                                Hole</a></li>
+                                                                        <li><a href="add-on-feature.html">Laser
+                                                                                Scoring</a></li>
+                                                                        <li><a href="add-on-feature.html">Pocket
+                                                                                Zipper</a></li>
+                                                                        <li><a href="add-on-feature.html">Plastic / Tread
+                                                                                Handle</a></li>
+                                                                        <li><a href="add-on-feature.html">Registered
+                                                                                Matt/Gloss Print</a></li>
+                                                                        <li><a href="add-on-feature.html">Velcro
+                                                                                Zipper</a></li>
+                                                                        <li><a href="add-on-feature.html">Register Window
+                                                                                Metalised/ Die-Cut Window</a></li>
+                                                                        <li><a href="add-on-feature.html">Security Ink
+                                                                                Printing</a></li>
+                                                                        <li><a href="add-on-feature.html">Holographic
+                                                                                Laminate</a></li>
+                                                                    </ul>
+                                                                    <h2><a href="cold-seal-packaging-roll-addon.html">Cold
+                                                                            Seal Packaging Roll</a></h2>
+                                                                    <h2><a href="shrink-sleeves-addon.html">Shrink
+                                                                            Sleeves</a></h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li><a href="technology.php">Technologies</a></li> -->
+                                    <li><a href="quality.html">Quality</a></li>
+                                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                                    <li><a href="sustainability.html">Sustainability</a></li>
+                                    <!-- <li><a href="investor-zone.php">Investor Zone</a></li> -->
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                                <!-- end menu area -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>        <!-- BANNER
+        ================================================== -->
+        <section class="py-0 top-position1 banner-style01 banner-main">
+            <video autoplay loop muted class="banner-video">
+                <source src="img/video/puritiflexpack-2023.mp4" type="video/mp4" />
+            </video>
+            <div class="progress-container">
+                <div class="container">
+                    <!-- slider -->
+                    <div class="sliderContainer">
+                        <div class="slider single-item">
+                            <div class="slider-fst">
+                                Your partner<br>in packaging
+                                <p>01 | 03</p>
+                            </div>
+                            <div class="slider-scnd">
+                                A commitment<br>to quality
+                                <p>02 | 03</p>
+                            </div>
+                            <div class="slider-thrd">
+                                Unforgettable<br>first impressions
+                                <p>03 | 03</p>
+                            </div>
+                        </div>
+                        <div class="progressBarContainer">
+                            <div class="item">
+                                <span data-slick-index="0" class="progressBar"></span>
+                            </div>
+                            <div class="item">
+                                <span data-slick-index="1" class="progressBar"></span>
+                            </div>
+                            <div class="item">
+                                <span data-slick-index="2" class="progressBar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider -->
+                </div>
+            </div>
+
+
+        </section>
+
+         <!-- ABOUT
+        ================================================== -->
+        <section class="about-style-02">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-style3 position-relative text-center text-sm-start">
+                            <div class="image-hover">
+                                <img loading="lazy" src="img/about-us/about-us.webp" class="border-radius-10 w-100" alt="about-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="">
+                            <div class="section-title">
+                                <span class="sm-title">About Us</span>
+                                <h2 class="mb-3 h1">We Are Your First Impression... !!</h2>
+                                <p class="mb-2">Purity Flexpack Limited is a PLC, manufacturing flexible packaging for various industries worldwide, situated in the State of Gujarat, India.</p>
+                                <p class="mb-2">The company is proud to offer state-of-the-art infrastructure with highly efficient production facilities, which includes a selection of local and imported machines and excellent customer presence.</p>
+                                <p class="mb-2">We are committed to providing unparalleled quality products coupled with responsive and professional communication. We will always look to increase our value to our customers through continuous improvements efforts and technological advancements. Our organization is dynamic and ever evolving to meet the needs and wants of the market and our customers, as our competencies and resources allow</p>
+                                <p class="mb-2">We offer superior quality in all our products, owing to the stringent quality control measures and attention to every aspect of manufacturing from procuring of raw materials to dispatch of final products. We are backed by a fully equipped laboratory, which is in compliance with ISO standards.</p>
+                                <div class="quote-about">
+                                    <p><span class="fw-bold">"Pioneering in innovative flexible packaging, Purity Flexpack supplies with every bit of excellence."</span><br><font>Think Packaging, Think us</font> <span class="fw-bold">- Kunal Patel, CEO</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Why Us
+        ================================================== -->
+        <section class="pb-9 pt-9" style="background:#f9f9f9;">
+            <div class="container position-relative z-index-9">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="story-video">
+                            <div class="section-title mb-1-9 text-center">
+                                <h2 class="mb-0">Why Us</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="why-us-new">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4 wow fadeInUp" data-wow-delay="200ms" >
+                                    <a href="quality.html">
+                                        <div class="content">
+                                            <img loading="lazy" src="img/about-us/why-us/legacy-of-excellence.webp" class="mb-3" alt="flexible-packaging-roll">
+                                            <h4>Legacy Of Excellence: Recognised Industry Leader For Over 3 Decades, With Best In-class Quality & Efficiency</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4 wow fadeInUp" data-wow-delay="300ms">
+                                    <a href="products.html">
+                                        <div class="content">
+                                            <img loading="lazy" loading="lazy" src="img/about-us/why-us/broad-product-offering.webp" class="mb-3" alt="flexible-packaging">
+                                            <h4>Broad Product Offering</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4 wow fadeInUp" data-wow-delay="400ms">
+                                    <a href="sustainability.html">
+                                        <div class="content">
+                                            <img loading="lazy" src="img/about-us/why-us/sustainability.webp" alt="multilayer-barrier-films" class="mb-3">
+                                            <h4>We Believe In Sustainability</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4 wow fadeInUp" data-wow-delay="200ms">
+                                    <a href="quality.html#certificate">
+                                        <div class="content">
+                                            <img loading="lazy" src="img/about-us/why-us/iso.webp" alt="general-flexibles" class="mb-3">
+                                            <h4>ISO 9001:2015 & ISO 22000:2018 Certified Manufacturer</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4 wow fadeInUp" data-wow-delay="300ms">
+                                    <a href="infrastructure.html">
+                                        <div class="content">
+                                            <img loading="lazy" src="img/about-us/why-us/state-of-art-infrastructure.webp" alt="general-flexibles" class="mb-3">
+                                            <h4>State Of The Art Infrastructure With High Quality Printing Methods</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4 wow fadeInUp" data-wow-delay="400ms">
+                                    <a href="capacity.html">
+                                        <div class="content">
+                                            <img loading="lazy" src="img/about-us/why-us/capacity-produce-pouches.webp" alt="general-flexibles" class="mb-3">
+                                            <h4>Capacity To Produce 30+ Million Pouches, Per Month</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us
+        ================================================== -->
+        <!-- <section class="pb-9 pt-0">
+            <div class="container position-relative z-index-9">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="story-video">
+                            <div class="section-title mb-1-9 text-center">
+                                <h2 class="mb-0">Why Us</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why-us-b-img text-center wow fadeInUp" data-wow-delay="200ms">
+                        <img src="img/new-img/why-us/why-us.webp" alt="" class="why-us-img-desk">
+                        <img src="img/new-img/why-us/why-us-mob.webp" alt="" class="why-us-img-mob">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Specialising
+        ================================================== -->
+        <!-- <section class="pb-9 pt-9 specialising-container">
+            <div class="container position-relative z-index-9">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="story-video">
+                            <div class="section-title mb-1-9 text-center">
+                                <h2 class="mb-0 text-white">Specialising</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="why-us-b-img text-center wow fadeInUp" data-wow-delay="200ms">
+                        <img src="img/new-img/specialising-in/specialising-in-desk.webp" class="why-us-img-desk" alt="">
+                        <img src="img/new-img/specialising-in/specialising-in-mob.webp" class="why-us-img-mob" alt="">
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="why-us-new">
+                            <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!-- Corporate
+        ================================================== -->
+        <section class="about-style-01">
+            <div class="container">
+                <div class="row align-items-center justify-content-center mt-n1-9">
+                    <div class="col-lg-6 col-xl-5 mt-1-9">
+                        <div class="position-relative z-index-9">
+                            <div class="row">
+                                <div class="col-12 wow fadeInUp aboutimg" data-wow-delay="200ms">
+                                    <div class="image-hover position-relative overflow-hidden">
+                                        <iframe loading="lazy" width="100%" height="286" src="https://www.youtube.com/embed/sPIkymBXzQA?si=Vi2NZ1TWf68scvx7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7 mt-1-9">
+                        <div class="ps-1-9 ps-xl-11">
+                            <div class="about-content">
+                                <!-- <div class="section-title mb-1-9">
+                                    <h2 class="mb-0 h1">Corporate</h2>
+                                </div> -->
+                                <div class="section-title mB-5">
+                                    <h1 class="mb-4 tagline">One Company Limitless Solutions</h1>
+                                </div>
+                                <img src="img/certificatesf73b.webp?var=1748926050" alt="ISO" class="mb-3">
+                                <p>The company is proud to offer state-of-the-art infrastructure with highly efficient production facilities, which includes a selection of local and imported machines and excellent customer presence.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision
+        ================================================== -->
+
+        <section class="about-style-02 pt-5 pb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6">
+                        <div class="">
+                            <div class="section-title">
+                                <h2 class=" mt-0">Mission</h2>
+                                <p class="">We at Purity Flexpack Limited, shall conduct our business with utmost honesty and integrity. Our ultimate objective is to meet Customer’s dynamic packaging needs and to achieve excellence in all concerned areas to produce cost effective flexible packaging with highest quality & standards for our esteemed Customers.</p>
+                                <h2 class=" mt-0">Vision</h2>
+                                <p class="">Our Vision is to be preferred supplier for flexible packaging to Customers across India and Overseas maximizing value for all stakeholders.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-style3 position-relative text-center text-sm-start">
+                            <div class="image-hover">
+                            <img loading="lazy" src="img/vision-mission-image.webp" class="w-100" alt="about-2" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore Products
+        ================================================== -->
+        <section class="item pt-5 pb-0 d-none">
+            <div class="container">
+                <div class="explore-arrow">
+                    <div class="arrow-container">
+                        <div class="arrow-down"></div>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-9 col-lg-8">
+                        <div class="section-title text-center mb-1-9 wow fadeIn" data-wow-delay="200ms">
+                            <span class="sm-title">explore</span>
+                            <h2 class="h1">Explore The Range Of Products</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pbmit-element-service-style-4 pt-5 d-none" data-cursor="white-color">
+            <div class="container-fluid g-0">
+                <div class="row g-0">
+                    <div class="swiper-hover-slide-nav col-md-12 col-lg-4 order-sm-first order-last">
+                        <ul class="pbmit-hover-inner product-list-nm">
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title newproduct-title">
+                                            <a href="printed-unprinted-roll-stock.html"><span>Printed / Unprinted Roll Stock</span></a>
+                                            <font>Multi-layer Adhesive Lamination Roll</font>
+                                            <font>Co-extrusion Lamination Roll</font>
+                                            <font>Stick Pack lamination Roll</font>
+                                            <font>Cold Seal Packaging Roll</font>
+                                            <font>Wrap Around BOPP Lables Roll</font>
+                                            <font>HFFS/ VFFS/ Flow Wrap Roll</font>
+                                            <font>Paper based Lamination Roll</font>
+                                            <font>Lidding Lamination</font>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="printed-unprinted-roll-stock.html"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title newproduct-title">
+                                            <a href="conventional-pouch.html"><span>Conventional Pouch</span></a>
+                                            <font>Central Seal/ Pillow Pouch</font>
+                                            <font>Three Side Seal Pouch</font>
+                                            <font>Stand Up/ Zipper Pouch</font>
+                                            <font>Side Gusset Central Seal Pouch</font>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="conventional-pouch.html"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title newproduct-title">
+                                            <a href="speciality-pouch.html"><span>Speciality Pouch</span></a>
+                                            <font>Retort Pouch</font>
+                                            <font>Spouted Pouch</font>
+                                            <font>De-gassing Valve Pouch</font>
+                                            <font>Flat-bottom Pouch</font>
+                                            <font>4 Side Flat Box Pouch</font>
+                                            <font>Quad Seal Pouch</font>
+                                            <font>Vacuum Pouch</font>
+                                            <font>Shaped Pouch</font>
+                                            <font>Membrane Pouch</font>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="speciality-pouch.html"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title newproduct-title">
+                                            <a href="add-on-feature.html"><span>Add-on(s)</span></a>
+                                            <font>Tear Notch</font>
+                                            <font>Child Resistant Zipper</font>
+                                            <font>D Cut/Hang Hole</font>
+                                            <font>Laser Scoring</font>
+                                            <font>Pocket Zipper</font>
+                                            <font>Plastic / Tread Handle</font>
+                                            <font>Registered Matt/Gloss Print</font>
+                                            <font>Velcro Zipper</font>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="add-on-feature.html"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-service-icon-wrapper">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="cold-seal-packaging-roll-addon.html"><span>Cold Seal Packaging Roll</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="cold-seal-packaging-roll-addon.html"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-service-icon-wrapper">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="shrink-sleeves-addon.html"><span>Shrink Sleeves</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="shrink-sleeves-addon.html"></a>
+                            </li>
+
+                            <!-- <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-service-icon-wrapper">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="cold-seal-packaging-roll.php"><span>Cold Seal Packaging Roll</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="cold-seal-packaging-roll.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="stick-pack-lamination-roll.php"><span>Stick Pack lamination Roll</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="stick-pack-lamination-roll.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="wrap-around-bopp-lables-roll.php"><span>Wrap Around BOPP Lables Roll</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="wrap-around-bopp-lables-roll.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="hffs-vffs-flow-wrap-roll.php"><span>HFFS/ VFFS/ Flow Wrap Roll</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="hffs-vffs-flow-wrap-roll.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="central-seal-pillow-pouch.php"><span>Central Seal/ Pillow Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="central-seal-pillow-pouch.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="three-side-seal-pouch.php"><span>Three Side Seal Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="three-side-seal-pouch.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="stand-up-zipper-pouch.php"><span>Stand Up/ Zipper Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="stand-up-zipper-pouch.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="side-gusset-central-seal-pouch.php`"><span>Side Gusset Central Seal Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="side-gusset-central-seal-pouch.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="retort-pouches.php"><span>Retort Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="retort-pouches.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="spouted-pouches.php"><span>Spouted Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="spouted-pouches.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="degassing-valve-pouches.php"><span>De-gassing Valve Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="degassing-valve-pouches.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="flat-bottom-pouches.php"><span>Flat-bottom Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="flat-bottom-pouches.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="vacuum-pouches.php"><span>Vacuum Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="vacuum-pouches.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="shaped-pouches.php"><span>Shaped Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="shaped-pouches.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="membrane-pouch.php"><span>Membrane Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="membrane-pouch.php"></a>
+                            </li>
+
+                            <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="4-side-flat-box-pouch.php"><span>4 Side Flat Box Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="4-side-flat-box-pouch.php"></a>
+                            </li> -->
+
+                            <!-- <li>
+                                <div class="pbmit-title-box-wrap justify-content-between d-flex align-items-center">
+                                    <div class="pbmit-title-box">
+                                        <h3 class="pbmit-service-title">
+                                            <a href="quad-seal-pouch.php"><span>Quad Seal Pouch</span></a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-svg-btn">
+                                        <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                            <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                            <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                            <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a class="pbmit-link" href="quad-seal-pouch.php"></a>
+                            </li> -->
+                        </ul>
+                        <div class="product-btn">
+                            <div class="pbmit-svg-btn">
+                                <a href="products.html">
+                                    View More
+                                    <svg class="pbmit-svg-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19" height="19" viewBox="0 0 19 19" xml:space="preserve">
+                                        <line x1="1" y1="18" x2="17.8" y2="1.2"></line>
+                                        <line x1="1.2" y1="1" x2="18" y2="1"></line>
+                                        <line x1="18" y1="17.8" x2="18" y2="1"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-8 order-sm-last order-first">
+                        <div class="pbmit-sticky-col">
+                            <div class="swiper-container pbmit-hover-image">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/multi-layer-adhesive-lamination-roll.webp');"></div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/central-seal-pillow-pouch.webp');"></div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/retort-pouches.webp');"></div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/add-on-feature/new/tear-notch.webp');"></div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/add-on-feature/new/cold-seal-packaging-roll.webp');"></div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/add-on-feature/new/shrink-sleeves.webp');"></div>
+                                    </div>
+
+                                    <!-- <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/shaped-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/three-side-seal-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/stand-up-zipper-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/side-gusset-central-seal-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/retort-pouches.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/spout-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/degassing-valve-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/flat-bottom-pouches.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/vacuum-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/shaped-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('img/home-explore/new/membrane-pouch.webp');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pbmit-service-img-wrapper" style="background-image:url('/img/home-explore/new/4-side-flat-box-bag.webp');"></div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Offer
+        ================================================== -->
+        <section class="pt-0 d-none">
+            <div class="container">
+                <div class="row align-items-xl-center about-style-02">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="ps-xl-1-9">
+                            <div class="section-title left mb-1-9">
+                                <span class="sm-title">What we offer</span>
+                                <h2 class="mb-0 h1 mt-2">Laminated Structures</h2>
+                            </div>
+                            <div id="accordion" class="accordion-style">
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#polyester-based" aria-expanded="true" aria-controls="polyester-based"> Polyester Based</button>
+                                        </h5>
+                                    </div>
+                                    <div id="polyester-based" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                                        <div class="whatweoffre-txt-list">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-lg-6">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + MET. PET + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + FOIL + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + CPP</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + EXT. PE + MET. PET + EXT. PE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">TWIST WRAPPER</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-5 mb-lg-0 image-hover">
+                                                    <img loading="lazy" src="img/whatweoffer/polyester-based.webp" alt="what We offter">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#bopa-cpp-based" aria-expanded="false" aria-controls="bopa-cpp-based">Bopa, Cpp Based</button>
+                                        </h5>
+                                    </div>
+                                    <div id="bopa-cpp-based" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                                        <div class="whatweoffre-txt-list ">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-lg-6">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">BOPP + CPP</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">BOPP MET.CPP</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">BOPA + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET BOPA + CPP</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + BOPA + FOIL + CPP</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-5 mb-lg-0 image-hover">
+                                                    <img loading="lazy" src="img/whatweoffer/bopa-cpp-based.webp" alt="What We offer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#bopp-based" aria-expanded="false" aria-controls="bopp-based">Bopp Based</button>
+                                        </h5>
+                                    </div>
+                                    <div id="bopp-based" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                                        <div class="whatweoffre-txt-list ">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-lg-6">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">MATT BOPP + MET. PET + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">BOPP + BOPP</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">BOPP MET. CPP</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PEARLIZED BOPP</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-5 mb-lg-0 image-hover">
+                                                    <img loading="lazy" src="img/whatweoffer/bopp-based.webp" alt="What We Offer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#paper-based" aria-expanded="false" aria-controls="paper-based">Paper Based</button>
+                                        </h5>
+                                    </div>
+                                    <div id="paper-based" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                                        <div class="whatweoffre-txt-list ">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-lg-6">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PAPER + EXT. PE + FOIL + EXT. PE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">POSTER PAPER + EXT. PE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">GLASSINE [OLB] PAPER + EXT. PE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PAPER FOIL + HSL</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-5 mb-lg-0 image-hover">
+                                                    <img loading="lazy" src="img/whatweoffer/paper-based.webp" alt="What We Offer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#aluminum-foil-based" aria-expanded="false" aria-controls="aluminum-foil-based">Aluminum Foil Based</button>
+                                        </h5>
+                                    </div>
+                                    <div id="aluminum-foil-based" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+                                        <div class="whatweoffre-txt-list ">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-lg-6">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PAPER + EXT. PE + FOIL + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET FOIL PET + LDPE</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ti-check display-26 text-primary"></i>
+                                                        <span class="ms-3 text-secondary fw-bold">PET + EXT. PE+ FOIL+ EXT. PE</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-5 mb-lg-0 image-hover">
+                                                    <img loading="lazy" src="img/whatweoffer/aluminum-foil-based.webp" alt="What We Offer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALUE ADDITIONS
+        ================================================== -->
+        <section class="pt-0 d-none">
+            <div class="container">
+                <div class="row mt-n1-9">
+                    <div class="col-lg-6 mt-1-9 position-relative">
+                        <div class="position-relative pe-lg-1-9 row align-items-center">
+                            <div class="col-5 image-hover">
+                                <img loading="lazy" src="img/value/value2.webp" alt="" class="rounded">
+                            </div>
+                            <div class="col-7 image-hover">
+                                <img loading="lazy" src="img/value/value-1.webp" alt="" class="rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-1-9">
+                        <div class="ps-4 ps-xl-2-9">
+                            <div class="section-title wow fadeInUp" data-wow-delay="100ms">
+                                <span class="sm-title">Value</span>
+                                <h2 class="h1 mb-1-9">Additions</h2>
+                            </div>
+                            <div class="row d-sm-flex align-items-center mb-2-9">
+                                <div class="col-lg-6">
+                                    <div>
+                                        <ul class="list-style2 mb-0">
+                                            <li class="wow fadeInUp" data-wow-delay="200ms">Tear Notch</li>
+                                            <li class="wow fadeInUp" data-wow-delay="300ms">Registered Matt/Gloss Print</li>
+                                            <li class="wow fadeInUp" data-wow-delay="400ms">De-gassing Valve/spouts</li>
+                                            <li class="wow fadeInUp" data-wow-delay="500ms">Child Resistant Zipper</li>
+                                            <li class="wow fadeInUp" data-wow-delay="600ms">Register Window Metalise</li>
+                                            <li class="wow fadeInUp" data-wow-delay="700ms">D Cut/Hang Hole</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <ul class="list-style2 mb-0">
+                                            <li class="wow fadeInUp" data-wow-delay="800ms">Laser Scoring</li>
+                                            <li class="wow fadeInUp" data-wow-delay="900ms">Pocket Zipper</li>
+                                            <li class="wow fadeInUp" data-wow-delay="1000ms">Security Ink Printing</li>
+                                            <li class="wow fadeInUp" data-wow-delay="1100ms">Holo Graphic Laminate</li>
+                                            <li class="wow fadeInUp" data-wow-delay="1200ms">Threads/Plastic Handles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients
+        ================================================== -->
+        <section class="about-style-01 pt-0 pb-lg-6 d-none">
+            <div class="container">
+                <div class="row align-items-center border-top border-color-light-black pt-6 pt-lg-10">
+                    <div class="col-md-12">
+                        <div class="clients02-carousel owl-carousel owl-theme text-center">
+                                                                                    <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/amul.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/amul.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/bodygard.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/bodygard.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/cipla.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/cipla.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/cocozay.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/cocozay.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/corteva.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/corteva.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/dr-batra.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/dr-batra.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/drytech.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/drytech.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/equate.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/equate.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/fag.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/fag.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/fairmate.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/fairmate.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/garada.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/garada.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/glenmark.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/glenmark.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/jagdish.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/jagdish.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/jivagro.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/jivagro.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/katlego.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/katlego.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/koparo.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/koparo.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/makino.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/makino.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/malas.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/malas.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/nirmal.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/nirmal.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/pi.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/pi.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/polycab.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/polycab.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/ramdev.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/ramdev.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/rewynd.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/rewynd.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/romsons.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/romsons.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/shakun.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/shakun.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/skoodle.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/skoodle.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/society.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/society.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/sugar-free.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/sugar-free.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/sun.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/sun.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/upl.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/upl.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/vasu.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/vasu.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/wonder.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/wonder.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/zed-balck.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/zed-balck.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div>
+                                <div class="clients position-relative">
+                                    <div class="client-img">
+                                        <img loading="lazy" src="img/clients/zydus-cadila.webp" alt="Clients">
+                                    </div>
+                                    <div class="client-hover-img text-center">
+                                        <img loading="lazy" src="img/clients/zydus-cadila.webp" alt="Clients">
+                                    </div>
+                                </div>
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <!-- FOOTER
+        ================================================== -->
+        <footer class="pt-6 pt-lg-8" style="background:#f9f9f9;">
+            <div class="container">
+                <div class="row mt-n2-9 pb-6 pb-lg-8">
+                    <div class="col-md-6 col-lg-5 mt-2-9 wow fadeIn" data-wow-delay="200ms">
+                        <div class="footer-logo mb-1-9">
+                            <a href="index-2.html"><img loading="lazy" src="img/logos/logo.png" alt="..."></a>
+                        </div>
+                        <p class="mb-1-5 fw-light display-28 lh-base text-black">Purity Flexpack Limited is a Public Limited Company in the field of Flexible Packaging, established in 1988 in Baroda with its manufacturing unit near Halol.</p>
+                        <p class="mb-1-9 fw-light display-28 lh-base text-black">Our aim is to produce the highest quality products in least amount of time at a good price performance ratio.</p>
+                        <img loading="lazy" src="img/certificatesf73b.webp?var=1748926050" alt="ISO" class="footer-ios">
+                        <ul class="social-icon-style1 footer-social">
+                            <li>
+                                <a href="https://www.facebook.com/PurityFlexpackLtd/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#!"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@PurityFlexpack" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://in.linkedin.com/company/purity-flexpack-ltd" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                        <img loading="lazy" src="img/purityflexpack.webp" alt="ISO" class="qrcode">
+                    </div>
+                    <div class="col-md-6 col-lg-2 mt-2-9 wow fadeIn" data-wow-delay="400ms">
+                        <div class="ps-0">
+                            <h3 class="h4 mb-1-9">Useful Links</h3>
+                            <ul class="footerlink">
+                                <li><a href="index-2.html">Home</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <!-- <li><a href="technology.php">Technologies</a></li> -->
+                                <!-- <li><a href="about.php">About Us</a></li> -->
+                                <li><a href="quality.html">Quality</a></li>
+                                <li><a href="infrastructure.html">Infrastructure</a></li>
+                                <li><a href="sustainability.html">Sustainability</a></li>
+                                <li><a href="investor-zone.html">Investor Zone</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                            <div class="button-box">
+
+                            <a href="javascript:;" class="ploting-btn btn-style-one click1 btn btn-primary" contenteditable="false" style="cursor: pointer;">Request a Quote</a>
+
+                        </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-2-9 offset-lg-1 wow fadeIn" data-wow-delay="600ms">
+                        <div class="ps-xl-4 footer-m">
+                            <h3 class="h4 mb-1-9">Contacts</h3>
+                            <div class="d-flex mb-1-5">
+                                <div class="flex-shrink-0">
+                                    <img loading="lazy" src="img/icons/location.png" alt="..." class="">
+                                </div>
+                                <div class="flex-grow-1 ms-3 footerlink">
+                                    <h4 class="mb-2 h5">Purity Flexpack Limited.</h4>
+                                    <p class="mb-2">At Vanseti, Tajpura Road, Near Baska - Halol, District - Panchmahal, Gujarat-389350, INDIA</p>
+                                    <p class="mb-2">(30kms From Vadodara City)</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-3 mb-1-5">
+                                <div class="flex-shrink-0">
+                                    <img loading="lazy" src="img/icons/footer-icons/for-domestic.webp" alt="..." class="">
+                                </div>
+                                <div class="flex-grow-1 ms-3 footerlink">
+                                    <h4 class="mb-1 h5">Domestic Sales</h4>
+                                    <p class="mb-2"><a href="mailto:purity@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });">purity@purityflexpack.com</a></p>
+                                    <p class="mb-2"><a href="mailto:marketing1@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing1@purityflexpack.com' });">marketing1@purityflexpack.com</a></p>
+                                    <p class="mb-2"><a href="tel:+918758752215" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+918758752215, ' });">+91 - 87587 52215</a></p>
+                                    <p class="mb-2"><a href="mailto:marketing2@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });">marketing2@purityflexpack.com</a></p>
+                                    <p class="mb-2"><a href="tel:+919925058428" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+919925058428, ' });">+91 - 99250 58428</a></p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-3 mb-1-5">
+                                <div class="flex-shrink-0">
+                                    <img loading="lazy" src="img/icons/footer-icons/for-export-usa.webp" alt="..." class="">
+                                </div>
+                                <div class="flex-grow-1 ms-3 footerlink">
+                                    <h4 class="mb-3 h5">International Sales</h4>
+                                    <p class="mb-2"><a href="mailto:sales.export@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales.export@purityflexpack.com' });">sales.export@purityflexpack.com</a></p>
+                                    <p class="mb-2"><a href="tel:+918469554428" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+918469554428' });">+91 84695 54428</a></p>
+                                    <p class="mb-2"><a href="mailto:export@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });">export@purityflexpack.com</a></p>
+                                    <p class="mb-2"><a href="tel:+919099026544" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+919099026544' });">+91 90990 26544</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-4 border-top border-color-extra-light-gray">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center">
+                            <p class="d-inline-block mb-0 footer-color">&copy; Copyright 2025 <a href="#!" class="text-primary">Purity Flexpack Limited</a> All right reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- SCROLL TO TOP
+    ================================================== -->
+    <a href="#!" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+    <style>
+        /* .footer-m p {
+            font-size:14px;
+        } */
+    </style>
+    <!-- all js include start -->
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- jquery -->
+    <script src="js/core.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- all js include end -->
+    <script src="js/slick.min.js"></script>
+    <script>
+        jQuery(".slider").slick({
+            infinite: true,
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+        //ticking machine
+            var percentTime;
+            var tick;
+            var time = .1;
+            var progressBarIndex = 0;
+
+            jQuery('.progressBarContainer .progressBar').each(function(index) {
+                var progress = "<div class='inProgress inProgress" + index + "'></div>";
+                jQuery(this).html(progress);
+            });
+
+            function startProgressbar() {
+                resetProgressbar();
+                percentTime = 0;
+                tick = setInterval(interval, 10);
+            }
+
+            function interval() {
+                if ((jQuery('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+                    progressBarIndex = jQuery('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+                    startProgressbar();
+                } else {
+                    percentTime += 1 / (time + 5);
+                    jQuery('.inProgress' + progressBarIndex).css({
+                        width: percentTime + "%"
+                    });
+                    if (percentTime >= 100) {
+                        jQuery('.single-item').slick('slickNext');
+                        progressBarIndex++;
+                        if (progressBarIndex > 2) {
+                            progressBarIndex = 0;
+                        }
+                        startProgressbar();
+                    }
+                }
+            }
+
+            function resetProgressbar() {
+                jQuery('.inProgress').css({
+                    width: 0 + '%'
+                });
+                clearInterval(tick);
+            }
+            startProgressbar();
+            // End ticking machine
+
+            jQuery('.item').click(function () {
+                clearInterval(tick);
+                var goToThisIndex = jQuery(this).find("span").data("slickIndex");
+                jQuery('.single-item').slick('slickGoTo', goToThisIndex, false);
+                startProgressbar();
+            });
+            jQuery(document).ready(function(){
+    jQuery( ".card-header .display-26" ).mouseover(function(){
+       jQuery( this ).trigger( "click" );
+    });
+});
+jQuery(function () {
+  jQuery(".packagingtype").on("change",function(){
+    if(jQuery(this).val() =="Packaging Rolls"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+      jQuery('.packaging_rolls_type').toggleClass("d-none");
+      
+      
+    }else if(jQuery(this).val() =="Standard Pouches"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+      jQuery('.standard_pouches_type').toggleClass("d-none");
+      
+    }else if(jQuery(this).val() =="Speciality Pouches"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+      jQuery('.speciality_pouches_type').toggleClass("d-none");
+      
+    }else if(jQuery(this).val() =="Shrink Sleeves"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+     
+      
+    }
+  });
+});
+    </script>
+
+    <!-- Slick JS -->
+    <!-- < ?php
+    echo "heres".$_SERVER['REQUEST_URI'];
+    if($_SERVER['REQUEST_URI'] == "/purityflexpack/index.php" ||  $_SERVER['REQUEST_URI'] == "purityflexpack-new"   || $_SERVER['REQUEST_URI'] == "/"){ ?> -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.js"></script> 
+    <script src="js/SplitText.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/gsap-animation.js"></script>
+    <!-- < ?php } ?> -->
+
+    <!-- Popup Modal & Sidebar -->
+    <script src="js/form-buzz.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/js.js"></script> 
+    <script language="javascript">
+        populateCountries("country", "state");
+    </script>
+    <script language="javascript">
+        populateCountries("country1", "state1");
+    </script>
+    <script language="javascript">
+        populateCountries("country2", "state2");
+    </script>
+    <script language="javascript">
+        populateCountries("country3", "state3");
+    </script>
+    
+    <!-- Tabs -->
+    <script src="tab/js/jquery.easyResponsiveTabs.js"></script>
+    <script src="tab/js/tab.js"></script>
+</body>
+
+<!-- Mirrored from www.purityflexpack.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 04:48:04 GMT -->
+</html>
