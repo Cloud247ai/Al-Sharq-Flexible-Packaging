@@ -280,6 +280,8 @@
     }
   </style>
 
+  
+
   <script>
     (function(w, d, s, l, i) {
 
@@ -434,57 +436,117 @@
         </section>
 
         <main class="container py-5">
-            <div class="filter-btns">
+        <!-- Filter Buttons -->
+        <div class="filter-btns mb-4 text-center">
             <button class="active" data-filter="*">All</button>
-            <button data-filter=".films">Films</button>
-            <button data-filter=".pouches">Pouches</button>
-            <button data-filter=".special">Specialty</button>
-            <button data-filter=".addon">Add-ons</button>
+            <button data-filter=".biscuit">Biscuit</button>
+            <button data-filter=".snacks">Snacks Foods</button>
+            <button data-filter=".frozen">Frozen Foods</button>
+            <button data-filter=".label">Label</button>
+            
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row" id="productGrid">
+            <!-- Biscuit -->
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-012.gif" class="img-fluid product-img" alt="Biscuit 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-011.gif" class="img-fluid product-img" alt="Biscuit 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-015.gif" class="img-fluid product-img" alt="Biscuit 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-017.gif" class="img-fluid product-img" alt="Biscuit 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-006.gif" class="img-fluid product-img" alt="Biscuit 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-010.gif" class="img-fluid product-img" alt="Biscuit 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-009.gif" class="img-fluid product-img" alt="Biscuit 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item biscuit" data-aos="fade-up">
+            <img src="./img/products/product-013.gif" class="img-fluid product-img" alt="Biscuit 2" />
             </div>
 
-            <div class="row" id="productGrid">
-        <!-- Cold Seal Packaging Roll -->
-        <div class="col-md-6 col-lg-4 mb-4 product-item addon" data-aos="fade-up">
-            <a href="cold-seal-rolls.html" class="d-block bg-light p-3 text-center">
-            <img src="./img/products/main-category-landing/cold-seal-packaging-roll.webp" class="img-fluid product-img mb-3" alt="Cold Seal Packaging Roll" />
-            <h5>Cold Seal Packaging Roll</h5>
-            </a>
-        </div>
+            <!-- frozen Foods -->
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-037.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-008.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-003.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-002.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-013.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-015.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-017.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item frozen" data-aos="fade-up">
+            <img src="./img/products/product-018.gif" class="img-fluid product-img" alt="Snacks 1" />
+            </div>
 
-        <!-- Conventional Pouch -->
-        <div class="col-md-6 col-lg-4 mb-4 product-item pouches" data-aos="fade-up">
-            <a href="stand-up-pouch.html" class="d-block bg-light p-3 text-center">
-            <img src="img/products/main-category-landing/conventional-pouch.webp" class="img-fluid product-img mb-3" alt="Conventional Pouch" />
-            <h5>Conventional Pouch</h5>
-            </a>
-        </div>
+            <!-- snacks Foods -->
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-001.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-004.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-005.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-007.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-028.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-029.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-030.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item snacks" data-aos="fade-up">
+            <img src="./img/products/product-031.gif" class="img-fluid product-img" alt="Frozen Food 1" />
+            </div>
 
-        <!-- Printed/Unprinted Roll Stock -->
-        <div class="col-md-6 col-lg-4 mb-4 product-item films" data-aos="fade-up">
-            <a href="printed-unprinted-roll-stock.html" class="d-block bg-light p-3 text-center">
-            <img src="img/products/main-category-landing/printed-unprinted-roll-stock.webp" class="img-fluid product-img mb-3" alt="Printed Roll Stock" />
-            <h5>Printed / Unprinted Roll Stock</h5>
-            </a>
-        </div>
+            <!-- Label -->
+            <div class="col-md-3 col-sm-6 mb-4 product-item label" data-aos="fade-up">
+            <img src="./img/products/label-1.gif" class="img-fluid product-img" alt="Label 1" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item label" data-aos="fade-up">
+            <img src="./img/products/label-2.gif" class="img-fluid product-img" alt="Label 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item label" data-aos="fade-up">
+            <img src="./img/products/label-3.gif" class="img-fluid product-img" alt="Label 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item label" data-aos="fade-up">
+            <img src="./img/products/label-4.gif" class="img-fluid product-img" alt="Label 2" />
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4 product-item label" data-aos="fade-up">
+            <img src="./img/products/label-5.gif" class="img-fluid product-img" alt="Label 2" />
+            </div>
 
-        <!-- Shrink Sleeves -->
-        <div class="col-md-6 col-lg-4 mb-4 product-item addon" data-aos="fade-up">
-            <a href="shrink-sleeves.html" class="d-block bg-light p-3 text-center">
-            <img src="img/products/main-category-landing/shrink-sleeves.webp" class="img-fluid product-img mb-3" alt="Shrink Sleeves" />
-            <h5>Shrink Sleeves</h5>
-            </a>
+            
         </div>
-
-        <!-- Specialty Pouch -->
-        <div class="col-md-6 col-lg-4 mb-4 product-item special" data-aos="fade-up">
-            <a href="speciality-pouch.html" class="d-block bg-light p-3 text-center">
-            <img src="img/products/main-category-landing/speciality-pouch.webp" class="img-fluid product-img mb-3" alt="Specialty Pouch" />
-            <h5>Specialty Pouch</h5>
-            </a>
-        </div>
-        </div>
-
         </main>
+
 
          <!-- FOOTER
         ================================================== -->
