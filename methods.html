@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta name="author" content="Al Sharq Flexible Packaging Factories - Films, Flexible, Raw Materials, and  Plastic Products">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords"
+        content="Confectionery & Dry Food Stuffs Packaging, Zipper Pouches, Food Packaging Pouches, Packaging for Special Applications, Pharmaceutical Packaging Material, Pouches, Agro Products Packaging, Purity Flexpack Limited, Vadodara">
+    <meta name="description" content="Al Sharq Flexible Packaging Factories - Films, Flexible, Raw Materials, and  Plastic Products">
+
+    <!-- title  -->
+    <title>Al Sharq Flexible Packaging Factories - Films, Flexible, Raw Materials, and  Plastic Products</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/webp" href="img/logos/favicon.png">
+
+    <!-- bootstrap -->
+    <link rel="preload stylesheet" href="css/bootstrap.min.css">
+
+    <!-- plugins -->
+    <link rel="preload stylesheet" href="css/plugins.css">
+
+    <!-- theme core css -->
+    <link href="css/styles.css" rel="preload stylesheet">
+    <link href="css/slick-theme.css" rel="preload stylesheet" />
+
+    <!-- Slick -->
+    <link rel="preload stylesheet" href="css/swiper.min.css">
+    <link rel="preload stylesheet" href="css/shortcode.css">
+
+    <!-- Popup Modal & Sidebar -->
+    <link rel="preload stylesheet" type="text/css" href="css/sidebar-btn.css">
+    <link rel="preload stylesheet" type="text/css" href="css/model-custom.css">
+
+    <!-- Tabs -->
+    <link href="tab/css/tab.css" rel="preload stylesheet" />
+    <link rel="preload" href="font/RageItalic.html" as="font" type="font/woff2" crossorigin>
+    <style>
+    header {
+        position: relative;
+        background: none;
+        z-index: 1049;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        z-index: 9999;
+        background-color: transparent;
+    }
+    .whatsapp-float img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        z-index: 9999;
+        animation: bounce 2.5s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-6px);
+        }
+    }
+
+    #certifications .card-img-top {
+  height: 280px;
+  object-fit: contain;
+  padding: 1rem;
+  background: #fff;
+}
+
+    .big-header-container {
+        /* overflow: hidden; */
+    }
+
+    .top-position1 {
+        margin-top: -217px
+    }
+    @media screen and (max-width: 768px) {
+        .top-position1 {
+        margin-top: -100px
+    }
+    }
+    .big-header-items {
+        justify-content: end;
+        width: 100%;
+        height: auto;
+        position: relative;
+       
+        background: rgba(255, 255, 255, 45%)
+    }
+
+    .big-header-items::before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        left: 8.5%;
+        top: 0px;
+        background: #3a6fd9;
+        transform: skewX(25deg);
+    }
+
+    .big-header-items::after {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        left: 5.1%;
+        top: 0px;
+        background: #81aae7;
+        transform: skewX(25deg);
+        box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 22%);
+    }
+
+    .big-header {
+        width: 100%;
+        display: block;
+        text-align: right
+    }
+
+    .big-header .big-header-logo {
+        width: 100%;
+        position: relative;
+    }
+
+    .big-header-logo::before {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        left: 1.5%;
+        top: 0px;
+        background: #3a6fd9;
+        transform: skewX(25deg);
+        box-shadow: 0px -3px 13px rgba(0, 0, 0, 30%);
+    }
+
+    .big-header .big-header-menu {
+        justify-content: end;
+        width: 100%;
+        height: auto;
+        
+        position: relative;
+        
+    }
+
+    .big-header .big-header-menu::before {
+        content: '';
+        position: absolute;
+        width: 86%;
+        height: 70px;
+        right: 18px;
+        top: 0px;
+        background: #3a6fd9;
+        transform: skewX(25deg);
+    }
+
+    .big-header .big-header-menu>li {
+        background: #3a6fd9;
+    }
+
+    .big-header .big-header-menu>li>a {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 21px 2.3rem;
+        color: #FFF !important;
+        letter-spacing: 0.8px;
+        -webkit-transition-duration: 500ms;
+        -o-transition-duration: 500ms;
+        transition-duration: 500ms;
+        text-transform: uppercase;
+    }
+
+    .big-header .big-header-menu .has-sub>a:after {
+        border-color: transparent #FFF #FFF transparent !important;
+    }
+
+    .big-header .big-header-menu>li>a:last-child {
+        padding: 21px 2.3rem;
+    }
+
+    .banner-main {
+        height: 101%;
+    }
+
+    .scrollHeader .big-header-items::before,
+    .scrollHeader .big-header-items::after {
+        height: 100%;
+    }
+
+    .scrollHeader .big-header .big-header-menu::before {
+        height: 69px
+    }
+
+    .big-header .big-header-menu>li.has-sub:hover>ul {
+        margin-top: 0px;
+        top: 69px;
+    }
+
+    .progress-container {
+        bottom: 9px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .big-header {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .big-header-items::after,
+        .big-header-items::before,
+        .big-header-logo::before,
+        .big-header-logo::before {
+            display: none;
+        }
+    }
+    </style>
+
+    <script>
+    (function(w, d, s, l, i) {
+
+        w[l] = w[l] || [];
+
+        w[l].push({
+
+            'gtm.start': new Date().getTime(),
+
+            event: 'gtm.js'
+
+        });
+
+        var f = d.getElementsByTagName(s)[0],
+
+            j = d.createElement(s),
+
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+
+        j.async = true;
+
+        j.src =
+
+            '../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+
+        f.parentNode.insertBefore(j, f);
+
+    })(window, document, 'script', 'dataLayer', 'GTM-5CJF5Q3');
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+
+
+    function gtag() {
+
+        dataLayer.push(arguments);
+
+    }
+    </script>
+</head>
+
+<body>
+  
+<!-- MAIN WRAPPER
+    ================================================== -->
+    <div class="main-wrapper">
+
+        <!-- HEADER
+        ================================================== -->
+        <header class="header-style1 menu_area-light big-header-container">
+
+            <div class="navbar-default border-bottom border-color-light-white">
+
+                <div class="container-fluid ps-0 pe-0">
+                    <div class="align-items-center">
+                        <div class="menu_area alt-font big-header-items">
+                            <nav class="p-0 navbar navbar-expand-lg navbar-light big-header">
+                                <div class="navbar-header navbar-header-custom big-header-logo">
+                                    <!-- start logo -->
+                                    <a href="./index.html" class="navbar-brand"><img loading="lazy" id="logo" src="./img/logos/logo.png"
+                                            alt="logo" /></a>
+                                    <!-- end logo -->
+                                </div>
+
+                                <div class="navbar-toggler bg-primary"></div>
+
+                                <!-- start menu area -->
+                                <ul class="navbar-nav ms-auto big-header-menu" id="nav" style="display: none;">
+                                    
+                                    <li><a href="./index.html">Home</a></li>
+                                    
+                                    
+                                    <li><a href="./about.html">About Us</a></li>
+
+                                    <li>
+                                        <a href="./products.html">Products</a>
+                                        <ul class="submenu-full">
+                                            <li>
+                                                <div class="row submenu-title">
+                                                    <div class="col-lg-12">
+                                                        <div class="row">
+
+                                                            <!-- Film Products -->
+                                                            <div class="col-lg-4">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="#">Film Products</a></h2>
+                                                                    <ul>
+                                                                        <li><a href="#">CPP Films</a></li>
+                                                                        <li><a href="#">Stretch Films</a></li>
+                                                                        <li><a href="#">LDPE / LLDPE Films</a></li>
+                                                                        <li><a href="#">EVOH / EVA Films</a></li>
+                                                                        <li><a href="#">Extrusion Blown Films</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Flexible Products -->
+                                                            <div class="col-lg-4">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="#">Flexible Products</a></h2>
+                                                                    <ul>
+                                                                        <li><a href="#">Film Metallizing</a></li>
+                                                                        <li><a href="#">Flexographic Printing</a></li>
+                                                                        <li><a href="#">Rotogravure Printing</a></li>
+                                                                        <li><a href="#">Solvent / Solventless Lamination</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Custom Options -->
+                                                            <div class="col-lg-4">
+                                                                <div class="submenu-inner">
+                                                                    <h2><a href="#">Custom Options</a></h2>
+                                                                    <ul>
+                                                                        <li><a href="#">Cold Seal Rolls</a></li>
+                                                                        <li><a href="#">Handles</a></li>
+                                                                        <li><a href="#">Security Inks</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="./methods.html">Production Methods</a></li>
+                                   
+                                    
+                                    <li><a href="./contact.html">Contact Us</a></li>
+                                </ul>
+                                <!-- end menu area -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+         <!-- Page Head: Production Methods
+        ================================================== -->
+        <section class="page-title-section text-center d-flex align-items-center justify-content-center"
+            style="height: 400px; background: linear-gradient(rgba(34, 34, 34, 0.75), rgba(34, 34, 34, 0.75)), url('./img/conbg.jpg ') center center / cover no-repeat;">
+            <div class="container">
+                <h1 class="text-white fw-bold display-4">Our Production Excellence</h1>
+                <p class="text-light fs-5">
+                    Experience the strength of advanced machinery, skilled craftsmanship, and cutting-edge technology—delivering packaging perfection from start to finish.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Highlights of Our Manufacturing Excellence
+        ================================================== -->
+        <section id="infra-video">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2 class="mb-0 h1">State-of-the-Art Integrated Manufacturing Facility</h2>
+                    <p class="mt-3">
+                        At Al Sharq Flexible Packaging, our world-class infrastructure is built to deliver unmatched efficiency and quality. 
+                        Equipped with a robust blend of advanced local and imported machinery, our facility ensures seamless production, innovation, and exceptional customer satisfaction across every stage of the process.
+                    </p>
+                </div>
+
+                <div class="infra-video">
+                    <div class="image-hover w-100">
+                        <video autoplay loop muted playsinline width="100%" height="700" style="object-fit: cover;">
+                            <source src="./img/video/alsharq.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Manufacturing Capabilities Gallery
+        ================================================== -->
+        <section class="pb-0">
+        <div class="container">
+            <div class="section-title text-center">
+            <h2 class="mb-0 h1">Advanced Infrastructure & Capabilities</h2>
+            <p class="mt-3">
+                Our facility is equipped with cutting-edge technology and high-performance machinery to ensure consistent quality, efficient production, and innovative packaging solutions.
+            </p>
+            </div>
+
+            <div class="row">
+            <!-- Capability Items -->
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/9-colour-roto-gravure-pritning-machine-with-els-technology.webp" alt="9 Colour Roto Gravure Printing Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">9-Colour Roto Gravure Printing Machine (ELS Technology)</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/blown-film-machine.webp" alt="Blown Film Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Blown Film Machine</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/extrusion-coating-lamination.webp" alt="Extrusion Coating & Lamination" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Extrusion Coating & Lamination</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/flat-bottom-pouch-machine.webp" alt="Flat Bottom Pouch Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Flat Bottom Pouch Machine</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/high-speed-slitting-machine.webp" alt="High-Speed Slitting Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">High-Speed Slitting Machine</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/inspection-machine.webp" alt="Inspection Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Inspection Machine</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/solvent-base-lamination-machine.webp" alt="Solvent-Based Lamination Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Solvent-Based Lamination Machine</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/solvent-less-lamination-machine.webp" alt="Solventless Lamination Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Solventless Lamination Machine</h3>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-4">
+                <div class="infra-box">
+                <div class="image-hover">
+                    <img loading="lazy" src="img/infrastructure/capabilities/stand-up-shape-pouch-machine.webp" alt="Stand-Up Pouch Machine" class="rounded">
+                </div>
+                <h3 class="h4 mb-0 capability-title">Stand-Up & Shaped Pouch Machine</h3>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Certifications & Participation
+        ================================================== -->
+        <section class="pt-5 pb-5 bg-light" id="certifications">
+        <div class="container">
+            <div class="text-center mb-5">
+            <h2 class="h1">Certifications & Industry Recognition</h2>
+            <p class="lead mt-3 mb-0">
+                At Al Sharq Flexible Packaging, quality and excellence are embedded in our operations. Our industry certifications and global event participation are a testament to our standards and leadership in the packaging domain.
+            </p>
+            </div>
+
+            <div class="row justify-content-center">
+            <!-- Industry Event -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100 text-center">
+                <img src="./img/about-us/feature.jpg" class="card-img-top" alt="Featured Exhibitor - Riyadh Expo 2025">
+                <div class="card-body">
+                    <h5 class="card-title">Featured Exhibitor</h5>
+                    <p class="card-text">Proud participant of Riyadh International Industry Week 2025, showcasing innovation in flexible packaging at Hall 2, Stand 2-219.</p>
+                </div>
+                </div>
+            </div>
+
+            <!-- ISO Certificate -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100 text-center">
+                <img src="./img/about-us/cert.jpeg" class="card-img-top" alt="ISO 22000:2015 Certificate">
+                <div class="card-body">
+                    <h5 class="card-title">ISO 22000:2015</h5>
+                    <p class="card-text">Certified for Food Safety Management System in manufacturing of flexible packaging materials.</p>
+                </div>
+                </div>
+            </div>
+
+            <!-- UN Packaging Certificate -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card border-0 shadow-sm h-100 text-center">
+                <img src="./img/about-us/cert3.jpg" class="card-img-top" alt="UN Packaging Certification">
+                <div class="card-body">
+                    <h5 class="card-title">UN Packaging Certification</h5>
+                    <p class="card-text">Certified by TUV SUD for 220L HDPE drum performance as per international packaging standards.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+
+
+        <!-- FOOTER
+        ================================================== -->
+          <footer style="background-color: #ffffff; color: #212529; padding-top: 60px; padding-bottom: 40px; border-top: 1px solid #e5e5e5; font-size: 14px;">
+            <div class="container">
+                <div class="text-center row text-md-start">
+                    <!-- Company Info -->
+                    <div class="mb-5 col-lg-4">
+                        <img src="img/logos/logo.png" alt="Al Sharq Logo" class="mb-3" style="max-width: 180px;">
+                        <p>Al Sharq Flexible Packaging is a leading manufacturer of high-quality flexible packaging films serving food, pharma, and industrial sectors across the region.</p>
+                        <div class="mt-3 fs-5">
+                            <a href="#" class="me-3 text-dark"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3 text-dark"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="me-3 text-dark"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="mb-5 col-lg-4">
+                        <h5 class="mb-4 fw-semibold">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="mb-2 text-dark text-decoration-none d-block">Home</a></li>
+                            <li><a href="about.html" class="mb-2 text-dark text-decoration-none d-block">About Us</a></li>
+                            <li><a href="products.html" class="mb-2 text-dark text-decoration-none d-block">Products</a></li>
+                            <li><a href="methods.html" class="mb-2 text-dark text-decoration-none d-block">Production Methods</a></li>
+                            <li><a href="contact.html" class="text-dark text-decoration-none d-block">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="mb-5 col-lg-4">
+                        <h5 class="mb-4 fw-semibold">Contact Us</h5>
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Al Sharq Industrial Zone, Dammam, Saudi Arabia</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i> +966 13 123 4567</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@alsharqflex.com</p>
+                        <a href="javascript:;" class="mt-3 btn btn-outline-dark btn-sm">Request a Quote</a>
+                    </div>
+                </div>
+
+                <div class="pt-3 text-center border-top" style="border-color: #ccc;">
+                    <p class="mb-0 text-muted" style="font-size: 13px;">&copy; 2025 Al Sharq Flexible Packaging. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- SCROLL TO TOP
+    ================================================== -->
+    <a href="#!" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+   
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- jquery -->
+    <script src="js/core.min.js"></script>
+
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- all js include end -->
+    <script src="js/slick.min.js"></script>
+    <script>
+        jQuery(".slider").slick({
+            infinite: true,
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+        //ticking machine
+            var percentTime;
+            var tick;
+            var time = .1;
+            var progressBarIndex = 0;
+
+            jQuery('.progressBarContainer .progressBar').each(function(index) {
+                var progress = "<div class='inProgress inProgress" + index + "'></div>";
+                jQuery(this).html(progress);
+            });
+
+            function startProgressbar() {
+                resetProgressbar();
+                percentTime = 0;
+                tick = setInterval(interval, 10);
+            }
+
+            function interval() {
+                if ((jQuery('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+                    progressBarIndex = jQuery('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+                    startProgressbar();
+                } else {
+                    percentTime += 1 / (time + 5);
+                    jQuery('.inProgress' + progressBarIndex).css({
+                        width: percentTime + "%"
+                    });
+                    if (percentTime >= 100) {
+                        jQuery('.single-item').slick('slickNext');
+                        progressBarIndex++;
+                        if (progressBarIndex > 2) {
+                            progressBarIndex = 0;
+                        }
+                        startProgressbar();
+                    }
+                }
+            }
+
+            function resetProgressbar() {
+                jQuery('.inProgress').css({
+                    width: 0 + '%'
+                });
+                clearInterval(tick);
+            }
+            startProgressbar();
+            // End ticking machine
+
+            jQuery('.item').click(function () {
+                clearInterval(tick);
+                var goToThisIndex = jQuery(this).find("span").data("slickIndex");
+                jQuery('.single-item').slick('slickGoTo', goToThisIndex, false);
+                startProgressbar();
+            });
+            jQuery(document).ready(function(){
+    jQuery( ".card-header .display-26" ).mouseover(function(){
+       jQuery( this ).trigger( "click" );
+    });
+});
+jQuery(function () {
+  jQuery(".packagingtype").on("change",function(){
+    if(jQuery(this).val() =="Packaging Rolls"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+      jQuery('.packaging_rolls_type').toggleClass("d-none");
+      
+      
+    }else if(jQuery(this).val() =="Standard Pouches"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+      jQuery('.standard_pouches_type').toggleClass("d-none");
+      
+    }else if(jQuery(this).val() =="Speciality Pouches"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+      jQuery('.speciality_pouches_type').toggleClass("d-none");
+      
+    }else if(jQuery(this).val() =="Shrink Sleeves"){
+        jQuery('.subcategories').removeClass("d-none");
+      jQuery('.subcategories').addClass("d-none");
+     
+      
+    }
+  });
+});
+    </script>
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/ScrollTrigger.js"></script> 
+    <script src="js/SplitText.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/gsap-animation.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a 
+    href="https://wa.me/7799999744" 
+    class="whatsapp-float" 
+    target="_blank" 
+    title="Chat with us on WhatsApp">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+    </a>
+
+
+    <!-- Zoho SalesIQ Live Chat -->
+    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq2c3a3131f2f7ee06910ca9b55c13b131a9fd241d5e1bd96742ebbfcb815ba9a9" defer></script>
+
+    
+
+    <!-- Popup Modal & Sidebar -->
+    <script src="js/form-buzz.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/js.js"></script> 
+    <script language="javascript">
+        populateCountries("country", "state");
+    </script>
+    <script language="javascript">
+        populateCountries("country1", "state1");
+    </script>
+    <script language="javascript">
+        populateCountries("country2", "state2");
+    </script>
+    <script language="javascript">
+        populateCountries("country3", "state3");
+    </script>
+    
+    <!-- Tabs -->
+    <script src="tab/js/jquery.easyResponsiveTabs.js"></script>
+    <script src="tab/js/tab.js"></script>
+</body>
+
+
+</html>

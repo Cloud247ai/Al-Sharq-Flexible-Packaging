@@ -1,42 +1,30 @@
-<!-- < ?php
-define("NITROPACK_HOME_URL", "https://www.purityflexpack.com/"); 
-define("NITROPACK_SITE_ID", "ZREXmWjxgjhVCAAkkolHnyAVtzGJBCEL"); 
-define("NITROPACK_SITE_SECRET", "Gt1s9P39J2RhyBEvK5QAsxYO0CykUQC5c0BNOKmRXQYo8CtEvKAOkAZL2iOUO4SD"); 
-include_once "nitropack-sdk/bootstrap.php";
 
-
-?> -->
 <!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from www.purityflexpack.com/contact.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Jun 2025 04:48:44 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 
     <!-- metas -->
     <meta charset="utf-8">
-    <meta name="author" content="Purity Flex Pack">
+    <meta name="author" content="Al Sharq Flexible Packaging Factories - Films, Flexible, Raw Materials, and  Plastic Products">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords"
         content="Confectionery & Dry Food Stuffs Packaging, Zipper Pouches, Food Packaging Pouches, Packaging for Special Applications, Pharmaceutical Packaging Material, Pouches, Agro Products Packaging, Purity Flexpack Limited, Vadodara">
-    <meta name="description" content="Purity Flex Pack">
+    <meta name="description" content="Al Sharq Flexible Packaging Factories - Films, Flexible, Raw Materials, and  Plastic Products">
 
     <!-- title  -->
-    <title>Purity Flex Pack</title>
+    <title>Al Sharq Flexible Packaging Factories - Films, Flexible, Raw Materials, and  Plastic Products</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/webp" href="img/logos/favicon.webp">
+    <link rel="icon" type="image/webp" href="img/logos/favicon.png">
 
     <!-- bootstrap -->
     <link rel="preload stylesheet" href="css/bootstrap.min.css">
 
     <!-- plugins -->
     <link rel="preload stylesheet" href="css/plugins.css">
-
-    <!-- quform css -->
-    <!-- <link rel="stylesheet" href="quform/css/base.css"> -->
 
     <!-- theme core css -->
     <link href="css/styles.css" rel="preload stylesheet">
@@ -58,6 +46,43 @@ include_once "nitropack-sdk/bootstrap.php";
         position: relative;
         background: none;
         z-index: 1049;
+    }
+
+    .page-title-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        z-index: 9999;
+        background-color: transparent;
+    }
+    .whatsapp-float img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 80px;
+        left: 20px;
+        z-index: 9999;
+        animation: bounce 2.5s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-6px);
+        }
     }
 
     .big-header-container {
@@ -89,7 +114,7 @@ include_once "nitropack-sdk/bootstrap.php";
         height: 100%;
         left: 8.5%;
         top: 0px;
-        background: #393185;
+        background: #3a6fd9;
         transform: skewX(25deg);
     }
 
@@ -100,7 +125,7 @@ include_once "nitropack-sdk/bootstrap.php";
         height: 100%;
         left: 5.1%;
         top: 0px;
-        background: #939598;
+        background: #81aae7;
         transform: skewX(25deg);
         box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 22%);
     }
@@ -123,7 +148,7 @@ include_once "nitropack-sdk/bootstrap.php";
         height: 100%;
         left: 1.5%;
         top: 0px;
-        background: #393185;
+        background: #3a6fd9;
         transform: skewX(25deg);
         box-shadow: 0px -3px 13px rgba(0, 0, 0, 30%);
     }
@@ -144,12 +169,12 @@ include_once "nitropack-sdk/bootstrap.php";
         height: 70px;
         right: 18px;
         top: 0px;
-        background: #393185;
+        background: #3a6fd9;
         transform: skewX(25deg);
     }
 
     .big-header .big-header-menu>li {
-        background: #393185;
+        background: #3a6fd9;
     }
 
     .big-header .big-header-menu>li>a {
@@ -196,6 +221,49 @@ include_once "nitropack-sdk/bootstrap.php";
         bottom: 9px;
     }
 
+.contact-modern h2 {
+  font-size: 28px;
+}
+
+.contact-modern .form-control,
+.contact-modern .form-select {
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.contact-modern textarea {
+  resize: vertical;
+}
+
+.contact-modern .btn-primary {
+  background-color: #393185;
+  border: none;
+}
+
+.contact-modern a {
+  text-decoration: none;
+}
+
+.contact-modern a:hover {
+  text-decoration: underline;
+}
+
+.contact-map {
+    min-height: 400px;
+    width: 100%;
+    filter: grayscale(20%) contrast(105%);
+}
+
+@media screen and (max-width: 768px) {
+  .page-title-section {
+    height: 250px !important;
+    background-position: center top !important;
+  }
+}
+
+
+
     @media screen and (max-width: 991px) {
         .big-header {
             text-align: left;
@@ -210,6 +278,7 @@ include_once "nitropack-sdk/bootstrap.php";
         }
     }
     </style>
+
     <script>
     (function(w, d, s, l, i) {
 
@@ -256,375 +325,9 @@ include_once "nitropack-sdk/bootstrap.php";
 </head>
 
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CJF5Q3" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    
-<div class="sticklist">
-    <input type="hidden" id="ismobile" value="0">
-    <button class="open-close-arrow">
-        <span class="open-arrow"><i class="fa fa-chevron-right"></i></span>
-        <span class="close-arrow"><i class="fa fa-chevron-left"></i></span>
-    </button>
-    <ul>
-        <li class="none-li inquiery-icon  imgnone">
-            <a href="javascript:;" class="click1">
-                <span class="icon1"> <i class="fa fa-envelope"></i></span> <span class="btn-text"> Send Inquiry</span>
-            </a>
-        </li>
-        <!-- <li class="download-pdf none-li inquiery-icon  imgnone">
-            <a href="javascript:;" class="click2">
-                <span class="icon"> <i class="fa fa-file-pdf-o"></i></span> <span class="btn-text">Catalogue</span>
-            </a>
-        </li> -->
-        <li class="whataspp-icon none-li imgnone">
-            <a onclick="gtag('event', 'send', { 'event_category': 'click on whatsapp', 'event_action': 'Mobile', 'event_label': '+919925058428' });"
-                href="https://api.whatsapp.com/send?phone=919925058428&amp;text=Hello%20Team%20Purity%20Flexpack%20Limited,%20I%20was%20going%20through%20your%20website%20and%20wish%20to%20get%20connected%20for%20product%20discussion" target="_blank">
-                <span class="icon1"> <i class="fab fa-whatsapp"></i></span> <span class="btn-text"> Whatsapp</span></a>
-        </li>
-    </ul>
-</div>
-<div class="modal fade bs-example-modal-sm cstm-modal-top-header my-custom-modal" tabindex="-1" role="dialog"
-    aria-labelledby="myLargeModalLabel" aria-hidden="true" id="onload">
-    <div class="modal-dialog modal-lg">
-        <input type="hidden" id="ispopupopen" value="1">
-        <div class="modal-content">
-            <div class="modal-body stick_popup">
-                <h5 class="modal-title">Get Your Free Quote…!</h5>
-                <div class="stick_close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></div>
-                <div class="row mt-40">
-                    <div class="col-md-6 col-sm-12 col-xs-12 leftsideimg">
-                        <div class="logo-wrapper">
-                            <img src="img/inquiry-box.webp" class="mb-3">
-                            <!-- <h3 class="text-center headerh3"><b>For Domestic</b></h3>
-                            <button class="btn-modal-gra">
-                                <a class="content-p" href="tel:+919925058428"
-                                    onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 99250 58428' });">
-                                    <b>+91 99250 58428</b>
-                                </a><br>
-                                <a class="content-p" href="mailto:purity@purityflexpack.com"
-                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });"><b>purity@purityflexpack.com</b></a><br><a
-                                    class="content-p" href="mailto:marketing@purityflexpack.com"
-                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing@purityflexpack.com' });"><b>marketing@purityflexpack.com</b></a><br><a
-                                    class="content-p" href="mailto:marketing2@purityflexpack.com"
-                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });"><b>marketing2@purityflexpack.com</b></a>
-                            </button>
-                            <h3 class="text-center headerh3 mt-3"><b>For Export</b></h3>
-                            <button class="btn-modal-gra">
-                                <a class="content-p" href="tel:+919099026544"
-                                    onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 90990 26544' });">
-                                    <b>+91 90990 26544</b>
-                                </a><br>
-                                <a class="content-p" href="mailto:export@purityflexpack.com"
-                                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });"><b>export@purityflexpack.com</b></a> -->
-                                <!--<br><a-->
-                                <!--class="content-p" href="mailto:sales@purityflexpack.com"-->
-                                <!--onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales@purityflexpack.com' });"><b>sales@purityflexpack.com</b></a>-->
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <div class="footer-widgets tag-widget">
-                            <input id="inquiery-model" value="" type="hidden" />
-                            <input id="isloadopenmodel" value="" type="hidden" />
-                            <input name="junk_trap" class="junk_trap" type="hidden" />
-                            <form class="form-horizontal form1" action="https://www.purityflexpack.com/inquiry-action.php" method="post"
-                                novalidate="novalidate">
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <input name="name" id="name" type="text" placeholder="Name"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <input name="email" id="email" type="text" placeholder="E-Mail Address"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <input name="cname" id="cname" type="text" placeholder="Company Name"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
-                                                <select id="country" name="country" class="form-control"></select>
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 col-xs-4 mybottom" style="display: none;">
-                                                <select name="code" id="state" class="form-control"
-                                                    style="padding-right: 0;color: #999;">
-                                                    <option value="">+00</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <input name="number" id="number" type="tel" placeholder="Phone" maxlength="15"
-                                            minlength="8" class="form-control number21">
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <input name="products" id="products" type="text" placeholder="Which kind of products do you want to pack?"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback">
-                                    <div class="col-md-12">
-                                        <select id="packagingtype" name="packagingtype"
-                                            class="form-control packagingtype">
-                                            <option value="">Select interested packaging type</option>
-                                            <option value="Packaging Rolls">Packaging Rolls</option>
-                                            <option value="Standard Pouches">Standard Pouches</option>
-                                            <option value="Speciality Pouches">Speciality Pouches</option>
-                                            <option value="Shrink Sleeves">Shrink Sleeves</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback packaging_rolls_type d-none subcategories">
-                                    <div class="col-md-12">
-                                        <select id="packaging_rolls_type" name="packaging_rolls_type"
-                                            class="form-control">
-                                            <option value="">Select packaging rolls</option>
-                                            <option value="Packaging Rolls">Multi-layer Adhesive Lamination Roll
-                                            </option>
-                                            <option value="Co-extrusion Lamination Roll">Co-extrusion Lamination Roll
-                                            </option>
-                                            <option value="Stick Pack lamination Roll">Stick Pack lamination Roll
-                                            </option>
-                                            <option value="Cold Seal Packaging Roll">Cold Seal Packaging Roll</option>
-                                            <option value="Wrap Around BOPP Label Rolls">Wrap Around BOPP Label Rolls
-                                            </option>
-                                            <option value="HFFS/ VFFS/ Flow Wrap Roll">HFFS/ VFFS/ Flow Wrap Roll
-                                            </option>
-                                            <option value="Paper based Lamination Roll">Paper based Lamination Roll
-                                            </option>
-                                            <option value="Lidding Lamination">Lidding Lamination</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback standard_pouches_type d-none subcategories">
-                                    <div class="col-md-12">
-                                        <select id="standard_pouches_type" name="standard_pouches_type"
-                                            class="form-control">
-                                            <option value="">Select standard pouches</option>
-                                            <option value="Central Seal/ Pillow Pouch">Central Seal/ Pillow Pouch
-                                            </option>
-                                            <option value="Three Side Seal Pouch">Three Side Seal Pouch</option>
-                                            <option value="Stand Up Pouch / Doy Pack">Stand Up Pouch / Doy Pack</option>
-                                            <option value="Side Gusset Central Seal Pouch">Side Gusset Central Seal
-                                                Pouch</option>
-                                            <option value="Quad Seal Pouch">Quad Seal Pouch</option>
-                                            <option value="Penta Seal Pouch">Penta Seal Pouch</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback speciality_pouches_type d-none subcategories">
-                                    <div class="col-md-12">
-                                        <select id="speciality_pouches_type" name="speciality_pouches_type"
-                                            class="form-control">
-                                            <option value="">Select speciality pouches</option>
-                                            <option value="Retort Pouches">Retort Pouches
-                                            </option>
-                                            <option value="Spouted Pouch">Spouted Pouch</option>
-                                            <option value="De-gassing Valve Pouch">De-gassing Valve Pouch</option>
-                                            <option value="Flat-bottom Pouch">Flat-bottom Pouch</option>
-                                            <option value="4 Side Flat Box Pouch">4 Side Flat Box Pouch</option>
-                                            <option value="Vacuum Pouch">Vacuum Pouch</option>
-                                            <option value="Shaped Pouch">Shaped Pouch
+   
 
-</option>
-                                            <option value="Heavy Duty Bags">Heavy Duty Bags</option>
-                                            <option value="Pocket Zipper Pouch">Pocket Zipper Pouch</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
-                                                <select id="quantity" name="quantity" class="form-control" style="color: #999;">
-                                                    <option value="">Required quantity</option>
-                                                    <option value="less then 10,000 units">less then 10,000 units
-                                                    </option>
-                                                    <option value="10,000 - 20,000 units">10,000 - 20,000 units</option>
-                                                    <option value="20,000 - 40,000 units">20,000 - 40,000 units</option>
-                                                    <option value="40,000+ units">40,000+ units</option>
 
-                                                </select>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <textarea class="form-control" name="message" id="message"
-                                            placeholder="Describe your requirements"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-8 col position-relative">
-                                                <input name="captcha" id="captcha" placeholder="Captcha Code"
-                                                    class="form-control" type="text">
-                                            </div>
-                                            <div class="col-md-4 col">
-                                                <img src="captcha.png" class="capside">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback">
-                                    <div class="col-md-12 col-sm-3 col-xs-12">
-                                        <input name="submit" class="submit submitbutton" type="submit"
-                                            value="Submit Now!">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-</div>
-<!-- End My Model -->
-<!-- catelog model -->
-<!-- <div class="modal fade bs-example-modal-sm cstm-modal-top-header my-custom-modal" tabindex="-1" role="dialog"
-aria-labelledby="myLargeModalLabel" aria-hidden="true" id="onload1">
-<div class="modal-dialog modal-sm">
-<div class="modal-content">
-    <div class="modal-body ">
-        <h5 class="modal-title">Catalogue Request Form…!</h5>
-        <div class="stick_close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></div>
-        <div class="row mt-40">
-            <div class="col-md-5 col-sm-12 col-xs-12">
-                <div class="logo-wrapper">
-                    <img src="img/logos/logo.png">
-                    <h3 class="text-center headerh3"><b>For Domestic</b></h3>
-                    <button class="btn-modal-gra">
-                    <a class="content-p" href="tel:+91 99250 58428"
-                        onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 99250 58428' });">
-                        <b>+91 99250 58428</b>
-                    </a><br>
-                    <a class="content-p" href="mailto:purity@purityflexpack.com"
-                    onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });"><b>purity@purityflexpack.com</b></a><br><a
-                    class="content-p" href="mailto:marketing@purityflexpack.com"
-                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing@purityflexpack.com' });"><b>marketing@purityflexpack.com</b></a><br><a
-                class="content-p" href="mailto:marketing2@purityflexpack.com"
-            onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });"><b>marketing2@purityflexpack.com</b></a>
-            </button>
-            <h3 class="text-center headerh3"><b>For Export</b></h3>
-            <button class="btn-modal-gra">
-            <a class="content-p" href="tel:+91 90990 26544"
-                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+91 90990 26544' });">
-                <b>+91 90990 26544</b>
-            </a><br>
-            <a class="content-p" href="mailto:export@purityflexpack.com"
-            onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });"><b>export@purityflexpack.com</b></a><br><a
-            class="content-p" href="mailto:sales@purityflexpack.com"
-        onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales@purityflexpack.com' });"><b>sales@purityflexpack.com</b></a>
-        </button>
-    </div>
-</div>
-<div class="col-md-7 col-sm-7 col-xs-12">
-    <div class=" footer-widgets tag-widget formtop">
-        <form class="form-horizontal form2" action="catalogue-action.php" method="post">
-            <div class="form-group has-feedback">
-                <div class="col-md-12">
-                    <input name="name" id="name2" type="text" placeholder="Name"
-                    class="form-control">
-                </div>
-            </div>
-            <div class="form-group has-feedback">
-                <div class="col-md-12">
-                    <input name="email" id="email2" type="text" placeholder="E-Mail Address"
-                    class="form-control">
-                </div>
-            </div>
-            <div class="form-group has-feedback class-feedback">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
-                        <select id="country1" name="country" class="form-control"></select>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4 mybottom" style="display: none;">
-                        <select name="code" id="state1" class="form-control"
-                            style="padding-right: 0;color: #999;">
-                            <option value="">+00</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="form-group has-feedback">
-            <div class="col-md-12">
-                <input name="number" id="number2" type="tel" placeholder="Phone" maxlength="10"
-                minlength="8" class="form-control number21">
-            </div>
-        </div>
-        <div class="form-group has-feedback">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-8 position-relative">
-                        <input name="captcha" id="captcha2" placeholder="Captcha Code"
-                        class="form-control" type="text">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="captcha.php" class="capside">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-8 inputGroupContainer">
-                <div class="input-group inline4">
-                    <input type="hidden" id="pt" name="path" value="">
-                </div>
-            </div>
-        </div>
-        <div class="form-group has-feedback">
-            <div class="col-md-12 col-sm-3 col-xs-12">
-                <input name="submit2" id="submit2" class="submit submitbutton" type="submit"
-                value="Download Now">
-            </div>
-        </div>
-    </form>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div> -->
-<!-- end catelog model -->
-<div class="footer-box" style="display: none;">
-    <div class="book-app" style="background:#393185;" id="req-apnmt2">
-        <a class="nav_up click1" href="javascript:;" style="color:#FFF; font-size:12px;font-weight:600;"><i
-                class="fa fa-envelope" style="margin-right: 5px;"></i> Enquire Now</a>
-    </div>
-    <!-- <div class="book-app" style="background: #222;">
-<a class="nav_up click2" href="javascript:;" style="color:#FFF; font-size:12px;font-weight:600;"><i
-class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> Catalogue</a>
-</div> -->
-    <div class="book-app" style="background: #2db640;">
-        <a onclick="gtag('event', 'send', { 'event_category': 'click on whatsapp', 'event_action': 'Mobile', 'event_label': '+919925058428' });"
-            href="https://api.whatsapp.com/send?phone=919925058428&amp;text=Hello%20Team%20Purity%20Flexpack%20Limited,%20I%20was%20going%20through%20your%20website%20and%20wish%20to%20get%20connected%20for%20product%20discussion" target="_blank"
-            style="color:#FFF; font-size:12px;font-weight:600;"><i class="fa fa-whatsapp"
-                style="margin-right: 5px;"></i> Whatsapp</a>
-    </div>
-</div>
 
 <!-- End My Model -->    <!-- MAIN WRAPPER
     ================================================== -->
@@ -639,10 +342,10 @@ class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> Catalogue</a>
                 <div class="container-fluid ps-0 pe-0">
                     <div class="align-items-center">
                         <div class="menu_area alt-font big-header-items">
-                            <nav class="navbar navbar-expand-lg navbar-light p-0 big-header">
+                            <nav class="p-0 navbar navbar-expand-lg navbar-light big-header">
                                 <div class="navbar-header navbar-header-custom big-header-logo">
                                     <!-- start logo -->
-                                    <a href="index-2.html" class="navbar-brand"><img loading="lazy" id="logo" src="img/logos/logo.webp"
+                                    <a href="./index.html" class="navbar-brand"><img loading="lazy" id="logo" src="./img/logos/logo.png"
                                             alt="logo" /></a>
                                     <!-- end logo -->
                                 </div>
@@ -651,130 +354,70 @@ class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> Catalogue</a>
 
                                 <!-- start menu area -->
                                 <ul class="navbar-nav ms-auto big-header-menu" id="nav" style="display: none;">
-                                    <!-- <li><a href="index.php">Home</a></li> -->
-                                    <li><a href="index-2.html">Home</a></li>
+                                    
+                                    <li><a href="./index.html">Home</a></li>
+                                    
+                                    
+                                    <li><a href="./about.html">About Us</a></li>
+
                                     <li>
-                                        <a href="products.html">Products</a>
+                                        <a href="./products.html">Products</a>
                                         <ul class="submenu-full">
                                             <li>
                                                 <div class="row submenu-title">
                                                     <div class="col-lg-12">
                                                         <div class="row">
-                                                            <div class="col-lg-3">
+
+                                                            <!-- Film Products -->
+                                                            <div class="col-lg-4">
                                                                 <div class="submenu-inner">
-                                                                    <h2><a href="printed-unprinted-roll-stock.html">Printed
-                                                                            / Unprinted Roll Stock</a></h2>
+                                                                    <h2><a href="#">Film Products</a></h2>
                                                                     <ul>
-                                                                        <li><a
-                                                                                href="multi-layer-adhesive-lamination-roll.html">Multi-layer
-                                                                                Adhesive Lamination Roll</a></li>
-                                                                        <li><a href="co-extrusion-lamination-roll.html">Co-extrusion
-                                                                                Lamination Roll</a></li>
-                                                                        <li><a href="stick-pack-lamination-roll.html">Stick
-                                                                                Pack lamination Roll</a></li>
-                                                                        <!-- <li><a href="cold-seal-packaging-roll.php">Cold Seal Packaging Roll</a></li> -->
-                                                                        <li><a href="wrap-around-bopp-lables-roll.html">Wrap
-                                                                                Around BOPP Label Rolls</a></li>
-                                                                        <li><a href="hffs-vffs-flow-wrap-roll.html">HFFS/
-                                                                                VFFS/ Flow Wrap Roll</a></li>
-                                                                        <li><a href="paper-based-lamination-roll.html">Paper
-                                                                                based Lamination Roll</a></li>
-                                                                        <li><a href="lidding-lamination.html">Lidding
-                                                                                Lamination</a></li>
+                                                                        <li><a href="#">CPP Films</a></li>
+                                                                        <li><a href="#">Stretch Films</a></li>
+                                                                        <li><a href="#">LDPE / LLDPE Films</a></li>
+                                                                        <li><a href="#">EVOH / EVA Films</a></li>
+                                                                        <li><a href="#">Extrusion Blown Films</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-3">
+
+                                                            <!-- Flexible Products -->
+                                                            <div class="col-lg-4">
                                                                 <div class="submenu-inner">
-                                                                    <h2><a href="conventional-pouch.html">Standard
-                                                                            Pouch</a></h2>
+                                                                    <h2><a href="#">Flexible Products</a></h2>
                                                                     <ul>
-                                                                        <li><a href="central-seal-pillow-pouch.html">Central
-                                                                                Seal/ Pillow Pouch</a></li>
-                                                                        <li><a href="three-side-seal-pouch.html">Three
-                                                                                Side Seal Pouch</a></li>
-                                                                        <li><a href="stand-up-zipper-pouch.html">Stand Up
-                                                                                Pouch / Doy Pack</a></li>
-                                                                        <li><a
-                                                                                href="side-gusset-central-seal-pouch.html">Side
-                                                                                Gusset Central Seal Pouch</a></li>
-                                                                        <li><a href="quad-seal-pouch.html">Quad Seal
-                                                                                Pouch</a></li>
-                                                                        <li><a href="penta-seal-pouch.html">Penta Seal
-                                                                                Pouch</a></li>
+                                                                        <li><a href="#">Film Metallizing</a></li>
+                                                                        <li><a href="#">Flexographic Printing</a></li>
+                                                                        <li><a href="#">Rotogravure Printing</a></li>
+                                                                        <li><a href="#">Solvent / Solventless Lamination</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-3">
+
+                                                            <!-- Custom Options -->
+                                                            <div class="col-lg-4">
                                                                 <div class="submenu-inner">
-                                                                    <h2><a href="speciality-pouch.html">Speciality
-                                                                            Application Pouch</a></h2>
+                                                                    <h2><a href="#">Custom Options</a></h2>
                                                                     <ul>
-                                                                        <li><a href="retort-pouches.html">Retort
-                                                                                Pouch</a></li>
-                                                                        <li><a href="spouted-pouches.html">Spouted
-                                                                                Pouch</a></li>
-                                                                        <li><a href="degassing-valve-pouches.html">De-gassing
-                                                                                Valve Pouch</a></li>
-                                                                        <li><a href="flat-bottom-pouches.html">Flat-bottom
-                                                                                Pouch</a></li>
-                                                                        <!-- <li class="ps-3"><a href="3-side-flat-bottom-pouch.php">3 Side Flat Bottom Pouch</a></li> -->
-                                                                        <li><a href="4-side-flat-box-pouch.html">4 Side
-                                                                                Flat Box Pouch</a></li>
-                                                                        <li><a href="vacuum-pouches.html">Vacuum
-                                                                                Pouch</a></li>
-                                                                        <li><a href="shaped-pouches.html">Shaped
-                                                                                Pouch</a></li>
-                                                                        <li><a href="heavy-duty-bags.html">Heavy Duty
-                                                                                Bags</a></li>
+                                                                        <li><a href="#">Cold Seal Rolls</a></li>
+                                                                        <li><a href="#">Handles</a></li>
+                                                                        <li><a href="#">Security Inks</a></li>
                                                                     </ul>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-3">
-                                                                <div class="submenu-inner">
-                                                                    <h2><a href="add-on-feature.html">Add-on(s)</a></h2>
-                                                                    <ul>
-                                                                        <li><a href="add-on-feature.html">Tear Notch</a>
-                                                                        </li>
-                                                                        <li><a href="add-on-feature.html">Child Resistant
-                                                                                Zipper</a></li>
-                                                                        <li><a href="add-on-feature.html">D Cut/Hang
-                                                                                Hole</a></li>
-                                                                        <li><a href="add-on-feature.html">Laser
-                                                                                Scoring</a></li>
-                                                                        <li><a href="add-on-feature.html">Pocket
-                                                                                Zipper</a></li>
-                                                                        <li><a href="add-on-feature.html">Plastic / Tread
-                                                                                Handle</a></li>
-                                                                        <li><a href="add-on-feature.html">Registered
-                                                                                Matt/Gloss Print</a></li>
-                                                                        <li><a href="add-on-feature.html">Velcro
-                                                                                Zipper</a></li>
-                                                                        <li><a href="add-on-feature.html">Register Window
-                                                                                Metalised/ Die-Cut Window</a></li>
-                                                                        <li><a href="add-on-feature.html">Security Ink
-                                                                                Printing</a></li>
-                                                                        <li><a href="add-on-feature.html">Holographic
-                                                                                Laminate</a></li>
-                                                                    </ul>
-                                                                    <h2><a href="cold-seal-packaging-roll-addon.html">Cold
-                                                                            Seal Packaging Roll</a></h2>
-                                                                    <h2><a href="shrink-sleeves-addon.html">Shrink
-                                                                            Sleeves</a></h2>
-                                                                </div>
-                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                     </li>
-                                    <!-- <li><a href="technology.php">Technologies</a></li> -->
-                                    <li><a href="quality.html">Quality</a></li>
-                                    <li><a href="infrastructure.html">Infrastructure</a></li>
-                                    <li><a href="sustainability.html">Sustainability</a></li>
-                                    <!-- <li><a href="investor-zone.php">Investor Zone</a></li> -->
-                                    <li><a href="contact.html">Contact Us</a></li>
+
+                                    <li><a href="./methods.html">Production Methods</a></li>
+                                   
+                                    
+                                    <li><a href="./contact.html">Contact Us</a></li>
                                 </ul>
                                 <!-- end menu area -->
                             </nav>
@@ -783,418 +426,180 @@ class="fa fa-file-pdf-o" style="margin-right: 5px;"></i> Catalogue</a>
                 </div>
             </div>
         </header>
-<!-- PAGE TITLE
+        
+        <!-- Page Head
         ================================================== -->
-<section class="page-title-section top-position1 bg-img cover-background left-overlay-secondary" data-overlay-dark="7"
-    data-background="img/breadcums/contact.webp">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="text-start">
-                    <div class="position-relative">
-                        <h1>Contact Us</h1>
+        <section class="page-title-section text-center d-flex align-items-center justify-content-center"
+            style="height: 400px; background: linear-gradient(rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.7)), url('img/conbg.jpg') center center / cover no-repeat;">
+            <div class="container">
+                <h1 class="text-white fw-bold display-4">Get in Touch</h1>
+                <p class="text-light fs-5">We’d love to hear from you — let’s start a conversation</p>
+            </div>
+        </section>
+
+
+
+        <!-- CONTACT FORM
+                ================================================== -->
+        <section class="contact-modern py-5" style="background-color: #f8f9fc;">
+        <div class="container">
+            <div class="row g-5 align-items-stretch">
+            
+            <!-- Left: Form -->
+            <div class="col-lg-7">
+                <div class="bg-white shadow-sm rounded p-4 h-100">
+                <h2 class="mb-4 text-primary fw-bold">Let’s Talk Packaging</h2>
+                <form action="https://www.purityflexpack.com/inquiry-action.php" method="post" class="row g-3">
+                    <div class="col-md-6">
+                    <input type="text" name="name" placeholder="Your Name" class="form-control" required>
                     </div>
-                    <!-- <ul>
-                                <li><a href="index.php">Home</a></li>
-                                <li>Contact Us</li>
-                            </ul> -->
+                    <div class="col-md-6">
+                    <input type="email" name="email" placeholder="Email Address" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                    <input type="text" name="cname" placeholder="Company Name" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                    <input type="tel" name="number" placeholder="Phone Number" class="form-control">
+                    </div>
+                    <div class="col-12">
+                    <input type="text" name="products" placeholder="What products do you want to pack?" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                    <select name="packagingtype" class="form-select">
+                        <option value="">Select Packaging Type</option>
+                        <option>Packaging Rolls</option>
+                        <option>Standard Pouches</option>
+                        <option>Speciality Pouches</option>
+                    </select>
+                    </div>
+                    <div class="col-md-6">
+                    <select name="quantity" class="form-select">
+                        <option value="">Required Quantity</option>
+                        <option>Less than 10,000</option>
+                        <option>10,000 - 20,000</option>
+                        <option>20,000 - 40,000</option>
+                        <option>40,000+</option>
+                    </select>
+                    </div>
+                    <div class="col-12">
+                    <textarea name="message" rows="4" class="form-control" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary px-4">Submit Now</button>
+                    </div>
+                </form>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            <!-- Right-side -->
+            <div class="col-lg-5">
+                <div class="p-4 rounded h-100 shadow-sm" style="background-color: #f8f9fc;">
+                    <h4 class="text-primary fw-bold mb-4">Get in Touch</h4>
 
-<!-- CONTACT FORM
-        ================================================== -->
-<section>
-    <div class="container">
-        <div class="contact-us">
-            <div class="row mt-n2-9">
-                <div class="col-lg-7 mt-2-9 my-custom-modal">
-                    <h2 class="text-secondary mb-4 h1">Write Us Something</h2>
-                    <form class="form-horizontal form3" action="https://www.purityflexpack.com/inquiry-action.php" method="post"
-                        novalidate="novalidate">
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12">
-                                <input name="name" id="name" type="text" placeholder="Name" class="form-control">
-                            </div>
+                    <div class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-map-marker-alt text-primary fa-lg me-3 mt-1"></i>
+                        <div>
+                            <strong class="d-block">Head Office</strong>
+                            <span>Al Sharq Industrial Zone, Dammam, Saudi Arabia</span>
                         </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12">
-                                <input name="email" id="email" type="text" placeholder="E-Mail Address"
-                                    class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12">
-                                <input name="cname" id="cname" type="text" placeholder="Company Name"
-                                    class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback class-feedback">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
-                                        <select id="country2" name="country" class="form-control"></select>
-                                    </div>
-                                    <div class="col-md-4 col-sm-4 col-xs-4 mybottom" style="display: none;">
-                                        <select name="code" id="state2" class="form-control"
-                                            style="padding-right: 0;color: #999;">
-                                            <option value="">+00</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12">
-                                <input name="number" id="number" type="tel" placeholder="Phone" maxlength="15"
-                                    minlength="8" class="form-control number21">
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                                    <div class="col-md-12">
-                                        <input name="products" id="products" type="text" placeholder="Which kind of products do you want to pack?"
-                                            class="form-control">
-                                    </div>
-                                </div>
-                        <div class="form-group has-feedback class-feedback">
-                                    <div class="col-md-12">
-                                        <select id="packagingtype" name="packagingtype"
-                                            class="form-control packagingtype">
-                                            <option value="">Select interested packaging type</option>
-                                            <option value="Packaging Rolls">Packaging Rolls</option>
-                                            <option value="Standard Pouches">Standard Pouches</option>
-                                            <option value="Speciality Pouches">Speciality Pouches</option>
-                                            <option value="Shrink Sleeves">Shrink Sleeves</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback packaging_rolls_type d-none subcategories">
-                                    <div class="col-md-12">
-                                        <select id="packaging_rolls_type" name="packaging_rolls_type"
-                                            class="form-control">
-                                            <option value="">Select packaging rolls</option>
-                                            <option value="Packaging Rolls">Multi-layer Adhesive Lamination Roll
-                                            </option>
-                                            <option value="Co-extrusion Lamination Roll">Co-extrusion Lamination Roll
-                                            </option>
-                                            <option value="Stick Pack lamination Roll">Stick Pack lamination Roll
-                                            </option>
-                                            <option value="Cold Seal Packaging Roll">Cold Seal Packaging Roll</option>
-                                            <option value="Wrap Around BOPP Label Rolls">Wrap Around BOPP Label Rolls
-                                            </option>
-                                            <option value="HFFS/ VFFS/ Flow Wrap Roll">HFFS/ VFFS/ Flow Wrap Roll
-                                            </option>
-                                            <option value="Paper based Lamination Roll">Paper based Lamination Roll
-                                            </option>
-                                            <option value="Lidding Lamination">Lidding Lamination</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback standard_pouches_type d-none subcategories">
-                                    <div class="col-md-12">
-                                        <select id="standard_pouches_type" name="standard_pouches_type"
-                                            class="form-control">
-                                            <option value="">Select standard pouches</option>
-                                            <option value="Central Seal/ Pillow Pouch">Central Seal/ Pillow Pouch
-                                            </option>
-                                            <option value="Three Side Seal Pouch">Three Side Seal Pouch</option>
-                                            <option value="Stand Up Pouch / Doy Pack">Stand Up Pouch / Doy Pack</option>
-                                            <option value="Side Gusset Central Seal Pouch">Side Gusset Central Seal
-                                                Pouch</option>
-                                            <option value="Quad Seal Pouch">Quad Seal Pouch</option>
-                                            <option value="Penta Seal Pouch">Penta Seal Pouch</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback speciality_pouches_type d-none subcategories">
-                                    <div class="col-md-12">
-                                        <select id="speciality_pouches_type" name="speciality_pouches_type"
-                                            class="form-control">
-                                            <option value="">Select speciality pouches</option>
-                                            <option value="Retort Pouches">Retort Pouches
-                                            </option>
-                                            <option value="Spouted Pouch">Spouted Pouch</option>
-                                            <option value="De-gassing Valve Pouch">De-gassing Valve Pouch</option>
-                                            <option value="Flat-bottom Pouch">Flat-bottom Pouch</option>
-                                            <option value="4 Side Flat Box Pouch">4 Side Flat Box Pouch</option>
-                                            <option value="Vacuum Pouch">Vacuum Pouch</option>
-                                            <option value="Shaped Pouch">Shaped Pouch</option>
-                                            <option value="Heavy Duty Bags">Heavy Duty Bags</option>
-                                            <option value="Pocket Zipper Pouch">Pocket Zipper Pouch</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group has-feedback class-feedback">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12 mybottom">
-                                                <select id="quantity" name="quantity" class="form-control" style="color: #999;">
-                                                    <option value="">Required quantity</option>
-                                                    <option value="less then 10,000 units">less then 10,000 units
-                                                    </option>
-                                                    <option value="10,000 - 20,000 units">10,000 - 20,000 units</option>
-                                                    <option value="20,000 - 40,000 units">20,000 - 40,000 units</option>
-                                                    <option value="40,000+ units">40,000+ units</option>
-
-                                                </select>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12">
-                                <textarea class="form-control" name="message" id="message"
-                                    placeholder="Describe your requirements"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-8 col position-relative">
-                                        <input name="captcha" id="captcha" placeholder="Captcha Code"
-                                            class="form-control" type="text">
-                                    </div>
-                                    <div class="col-md-4 col">
-                                        <img src="captcha.png" class="capside">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-md-12 col-sm-3 col-xs-12">
-                                <input name="submit" class="submit submitbutton" type="submit" value="Submit Now!">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-5 mt-2-9">
-                    <div class="contact-details">
-                        <div class="row">
-                            <div class="section-title mb-1-9">
-                                <span class="sm-title sm-title-contact-details">Contact</span>
-                                <h2 class="h4 text-white">Our Contact Detail</h2>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="contact-info upper">
-                                    <div class="contacts-icon">
-                                        <img loading="lazy" src="img/icons/03.png" alt="...">
-                                    </div>
-                                    <div class="contacts-title">
-                                        <h5 class="text-white font-weight-600 display-28">Purity Flexpack Limited</h5>
-                                        <h6 class="text-white font-weight-400 mb-0">REGISTERED OFFICE & FACTORY
-AT: VANSETI, BASKA-TAJPURA ROAD,
-BASKA, HALOL-389350,
-PANCHMAHAL, GUJARAT, INDIA  <br> (30kms From Vadodara City)</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="contact-info">
-                                    <div class="contacts-icon">
-                                        <img loading="lazy" src="img/icons/contact-us-icons/for-domestic.webp" alt="...">
-                                    </div>
-                                    <div class="contacts-title">
-                                        <h5 class="text-white font-weight-600 display-28">Domestic Sales</h5>
-                                        <h6 class="text-white font-weight-400"><a
-                                                href="mailto:purity@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });">purity@purityflexpack.com</a>
-                                        </h6>
-                                        <h6 class="text-white font-weight-400"><a
-                                                href="mailto:marketing1@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing1@purityflexpack.com' });">marketing1@purityflexpack.com</a>
-                                        </h6>
-                                        <h6 class="text-white font-weight-400 mb-0"><a href="tel:+918758752215, "
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+918758752215, ' });">+91
-                                                - 87587 52215</a></h6>
-                                        <h6 class="text-white font-weight-400"><a
-                                                href="mailto:marketing2@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });">marketing2@purityflexpack.com</a>
-                                        </h6>
-                                        <h6 class="text-white font-weight-400"><a href="tel:+919925058428, "
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+919925058428, ' });">+91
-                                                - 99250 58428</a></h6>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="contact-info upper2 pb-0">
-                                    <div class="contacts-icon upper">
-                                        <img loading="lazy" src="img/icons/contact-us-icons/for-export-usa.webp" alt="...">
-                                    </div>
-                                    <div class="contacts-title">
-                                        <h5 class="text-white font-weight-600 display-28">International Sales</h5>
-                                        <h6 class="text-white font-weight-400"><a
-                                                href="mailto:sales.export@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales.export@purityflexpack.com' });">sales.export@purityflexpack.com</a>
-                                        </h6>
-                                        <h6><a href="tel:+918469554428"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+918469554428' });">+91
-                                                84695 54428</a></h6>
-                                        <h6 class="text-white font-weight-400"><a
-                                                href="mailto:export@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });">export@purityflexpack.com</a>
-                                        </h6>
-                                        <h6 class="text-white font-weight-400 mb-0"><a href="tel:+919099026544"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+919099026544' });">+91
-                                                90990 26544</a></h6>
-					<h5 class="text-white font-weight-600 display-28">North American Region Office</h5>
-					<h6 class="text-white font-weight-400"><a
-                                                href="mailto:meetp@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'meetp@purityflexpack.com' });">meetp@purityflexpack.com</a>
-                                        </h6>
-                                        <h6><a href="tel:+12128142117"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+12128142117' });">+1
-                                                212 814 2117</a></h6>
-					<h6 class="text-white font-weight-400"><a
-                                                href="mailto:harsht@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'harsht@purityflexpack.com' });">harsht@purityflexpack.com</a>
-                                        </h6>
-                                        <h6><a href="tel:+18178997964"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+18178997964' });">+1
-                                                817-899-7964</a></h6>
-					<h5 class="text-white font-weight-600 display-28">Canada Region Office</h5>
-					<h6 class="text-white font-weight-400"><a
-                                                href="mailto:export1@purityflexpack.com"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export1@purityflexpack.com' });">export1@purityflexpack.com</a>
-                                        </h6>
-                                        <h6><a href="tel:+15198083781"
-                                                onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+15198083781' });">+1
-                                                519-808-3781</a></h6>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="">
-                                    <div class="follow-company-icon2">
-                                        <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                                        <a href="#"> <i class="fab fa-twitter"> </i> </a>
-                                        <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
-                                        <a href="#"> <i class="fab fa-pinterest-p"></i> </a>
-                                    </div> -->
-
-                            <!-- <img loading="lazy" src="img/certificates-white-contact.webp" alt="ISO" class="mt-4"> -->
-                        </div>
-
                     </div>
+
+                    <div class="mb-3 d-flex align-items-start">
+                        <i class="fas fa-envelope text-primary fa-lg me-3 mt-1"></i>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@alsharqflex.com" class="text-dark">info@alsharqflex.com</a>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex align-items-start">
+                        <i class="fas fa-phone text-primary fa-lg me-3 mt-1"></i>
+                        <div>
+                            <strong>Call Us</strong><br>
+                            <a href="tel:+966131234567" class="text-dark">+966 13 123 4567</a>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <h5 class="text-primary fw-semibold mt-4 mb-3">Careers at Al Sharq</h5>
+                    <p class="mb-2">Join one of Saudi Arabia’s most advanced packaging manufacturers and shape the future of innovation.</p>
+                    <p class="mb-3">Email your resume to <a href="mailto:careers@alsharqflex.com" class="fw-bold text-dark">careers@alsharqflex.com</a></p>
+                    
+                    
                 </div>
             </div>
-        </div>
-    </div>
-    </div>
-</section>
 
-<!-- MAP
+
+            
+            </div>
+        </div>
+        </section>
+
+
+
+        <!-- MAP
         ================================================== -->
-<section class="p-0">
-    <div class="container-fuild">
-        <iframe class="contact-map" id="gmap_canvas"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7375.01970446784!2d73.459308!3d22.447467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fd58b86954b3f%3A0x84d9dfb0bda41c39!2sPurity%20Flexpack%20Limited!5e0!3m2!1sen!2sin!4v1692942441424!5m2!1sen!2sin"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</section>
+        <section class="p-0 mt-5">
+            <div class="container-fluid">
+                <iframe 
+                    class="contact-map w-100" 
+                    id="gmap_canvas"
+                    height="400"
+                    frameborder="0"
+                    style="border:0;"
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.4762275260036!2d49.9880!3d26.4336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e35b89edce8c0c5%3A0xc4dcf69f9d7c32d8!2s2nd%20Industrial%20City%2C%20Dammam%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1710000000000">
+                </iframe>
+            </div>
+        </section>
+
+
 
         <!-- FOOTER
         ================================================== -->
-        <footer class="pt-6 pt-lg-8" style="background:#f9f9f9;">
+          <footer style="background-color: #ffffff; color: #212529; padding-top: 60px; padding-bottom: 40px; border-top: 1px solid #e5e5e5; font-size: 14px;">
             <div class="container">
-                <div class="row mt-n2-9 pb-6 pb-lg-8">
-                    <div class="col-md-6 col-lg-5 mt-2-9 wow fadeIn" data-wow-delay="200ms">
-                        <div class="footer-logo mb-1-9">
-                            <a href="index-2.html"><img loading="lazy" src="img/logos/logo.png" alt="..."></a>
+                <div class="text-center row text-md-start">
+                    <!-- Company Info -->
+                    <div class="mb-5 col-lg-4">
+                        <img src="img/logos/logo.png" alt="Al Sharq Logo" class="mb-3" style="max-width: 180px;">
+                        <p>Al Sharq Flexible Packaging is a leading manufacturer of high-quality flexible packaging films serving food, pharma, and industrial sectors across the region.</p>
+                        <div class="mt-3 fs-5">
+                            <a href="#" class="me-3 text-dark"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="me-3 text-dark"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="me-3 text-dark"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
                         </div>
-                        <p class="mb-1-5 fw-light display-28 lh-base text-black">Purity Flexpack Limited is a Public Limited Company in the field of Flexible Packaging, established in 1988 in Baroda with its manufacturing unit near Halol.</p>
-                        <p class="mb-1-9 fw-light display-28 lh-base text-black">Our aim is to produce the highest quality products in least amount of time at a good price performance ratio.</p>
-                        <img loading="lazy" src="img/certificatesb844.webp?var=1748926061" alt="ISO" class="footer-ios">
-                        <ul class="social-icon-style1 footer-social">
-                            <li>
-                                <a href="https://www.facebook.com/PurityFlexpackLtd/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li>
-                                <a href="#!"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/@PurityFlexpack" target="_blank"><i class="fab fa-youtube"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://in.linkedin.com/company/purity-flexpack-ltd" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </li>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="mb-5 col-lg-4">
+                        <h5 class="mb-4 fw-semibold">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="mb-2 text-dark text-decoration-none d-block">Home</a></li>
+                            <li><a href="about.html" class="mb-2 text-dark text-decoration-none d-block">About Us</a></li>
+                            <li><a href="products.html" class="mb-2 text-dark text-decoration-none d-block">Products</a></li>
+                            <li><a href="methods.html" class="mb-2 text-dark text-decoration-none d-block">Production Methods</a></li>
+                            <li><a href="contact.html" class="text-dark text-decoration-none d-block">Contact Us</a></li>
                         </ul>
-                        <img loading="lazy" src="img/purityflexpack.webp" alt="ISO" class="qrcode">
                     </div>
-                    <div class="col-md-6 col-lg-2 mt-2-9 wow fadeIn" data-wow-delay="400ms">
-                        <div class="ps-0">
-                            <h3 class="h4 mb-1-9">Useful Links</h3>
-                            <ul class="footerlink">
-                                <li><a href="index-2.html">Home</a></li>
-                                <li><a href="products.html">Products</a></li>
-                                <!-- <li><a href="technology.php">Technologies</a></li> -->
-                                <!-- <li><a href="about.php">About Us</a></li> -->
-                                <li><a href="quality.html">Quality</a></li>
-                                <li><a href="infrastructure.html">Infrastructure</a></li>
-                                <li><a href="sustainability.html">Sustainability</a></li>
-                                <li><a href="investor-zone.html">Investor Zone</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                            <div class="button-box">
 
-                            <a href="javascript:;" class="ploting-btn btn-style-one click1 btn btn-primary" contenteditable="false" style="cursor: pointer;">Request a Quote</a>
-
-                        </div> 
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mt-2-9 offset-lg-1 wow fadeIn" data-wow-delay="600ms">
-                        <div class="ps-xl-4 footer-m">
-                            <h3 class="h4 mb-1-9">Contacts</h3>
-                            <div class="d-flex mb-1-5">
-                                <div class="flex-shrink-0">
-                                    <img loading="lazy" src="img/icons/location.png" alt="..." class="">
-                                </div>
-                                <div class="flex-grow-1 ms-3 footerlink">
-                                    <h4 class="mb-2 h5">Purity Flexpack Limited.</h4>
-                                    <p class="mb-2">At Vanseti, Tajpura Road, Near Baska - Halol, District - Panchmahal, Gujarat-389350, INDIA</p>
-                                    <p class="mb-2">(30kms From Vadodara City)</p>
-                                </div>
-                            </div>
-                            <div class="d-flex mt-3 mb-1-5">
-                                <div class="flex-shrink-0">
-                                    <img loading="lazy" src="img/icons/footer-icons/for-domestic.webp" alt="..." class="">
-                                </div>
-                                <div class="flex-grow-1 ms-3 footerlink">
-                                    <h4 class="mb-1 h5">Domestic Sales</h4>
-                                    <p class="mb-2"><a href="mailto:purity@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'purity@purityflexpack.com' });">purity@purityflexpack.com</a></p>
-                                    <p class="mb-2"><a href="mailto:marketing1@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing1@purityflexpack.com' });">marketing1@purityflexpack.com</a></p>
-                                    <p class="mb-2"><a href="tel:+918758752215" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+918758752215, ' });">+91 - 87587 52215</a></p>
-                                    <p class="mb-2"><a href="mailto:marketing2@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'marketing2@purityflexpack.com' });">marketing2@purityflexpack.com</a></p>
-                                    <p class="mb-2"><a href="tel:+919925058428" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+919925058428, ' });">+91 - 99250 58428</a></p>
-                                </div>
-                            </div>
-                            <div class="d-flex mt-3 mb-1-5">
-                                <div class="flex-shrink-0">
-                                    <img loading="lazy" src="img/icons/footer-icons/for-export-usa.webp" alt="..." class="">
-                                </div>
-                                <div class="flex-grow-1 ms-3 footerlink">
-                                    <h4 class="mb-3 h5">International Sales</h4>
-                                    <p class="mb-2"><a href="mailto:sales.export@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'sales.export@purityflexpack.com' });">sales.export@purityflexpack.com</a></p>
-                                    <p class="mb-2"><a href="tel:+918469554428" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+918469554428' });">+91 84695 54428</a></p>
-                                    <p class="mb-2"><a href="mailto:export@purityflexpack.com" onclick="gtag('event', 'send', { 'event_category': 'click on mail', 'event_action': 'mailto', 'event_label': 'export@purityflexpack.com' });">export@purityflexpack.com</a></p>
-                                    <p class="mb-2"><a href="tel:+919099026544" onclick="gtag('event', 'send', { 'event_category': 'click on Mobile', 'event_action': 'Mobile', 'event_label': '+919099026544' });">+91 90990 26544</a></p>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Contact Info -->
+                    <div class="mb-5 col-lg-4">
+                        <h5 class="mb-4 fw-semibold">Contact Us</h5>
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Al Sharq Industrial Zone, Dammam, Saudi Arabia</p>
+                        <p class="mb-2"><i class="fas fa-phone me-2"></i> +966 13 123 4567</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@alsharqflex.com</p>
+                        <a href="javascript:;" class="mt-3 btn btn-outline-dark btn-sm">Request a Quote</a>
                     </div>
                 </div>
-            </div>
-            <div class="py-4 border-top border-color-extra-light-gray">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-12 text-center">
-                            <p class="d-inline-block mb-0 footer-color">&copy; Copyright 2025 <a href="#!" class="text-primary">Purity Flexpack Limited</a> All right reserved.</p>
-                        </div>
-                    </div>
+
+                <div class="pt-3 text-center border-top" style="border-color: #ccc;">
+                    <p class="mb-0 text-muted" style="font-size: 13px;">&copy; 2025 Al Sharq Flexible Packaging. All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -1224,6 +629,21 @@ PANCHMAHAL, GUJARAT, INDIA  <br> (30kms From Vadodara City)</h6>
     <!-- custom scripts -->
     <script src="js/main.js"></script>
 
+    <!-- WhatsApp Floating Button -->
+    <a 
+    href="https://wa.me/7799999744" 
+    class="whatsapp-float" 
+    target="_blank" 
+    title="Chat with us on WhatsApp">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+    </a>
+
+
+    <!-- Zoho SalesIQ Live Chat -->
+    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq2c3a3131f2f7ee06910ca9b55c13b131a9fd241d5e1bd96742ebbfcb815ba9a9" defer></script>
+
+    
+
     <!-- all js include end -->
     <script src="js/slick.min.js"></script>
     <script>
@@ -1244,7 +664,7 @@ PANCHMAHAL, GUJARAT, INDIA  <br> (30kms From Vadodara City)</h6>
             var progressBarIndex = 0;
 
             jQuery('.progressBarContainer .progressBar').each(function(index) {
-                var progress = "<div class='inProgress inProgress" + index + "'></div>";
+                var progress = "<div class='inProgress" + index + "'></div>";
                 jQuery(this).html(progress);
             });
 
