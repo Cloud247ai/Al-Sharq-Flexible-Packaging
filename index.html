@@ -38,6 +38,10 @@
     <link rel="preload stylesheet" type="text/css" href="css/model-custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <!-- Tabs -->
     <link href="tab/css/tab.css" rel="preload stylesheet" />
@@ -68,6 +72,31 @@
         z-index: 9999;
         animation: bounce 2.5s infinite;
     }
+
+    /* WHY US ICON STYLE ENHANCEMENTS */
+    .why-us-new img {
+    background-color: rgba(31, 38, 116, 0.08); /* light indigo tint */
+    border-radius: 50%;
+    padding: 16px;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* HOVER EFFECT */
+    .why-us-new .content:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(31, 38, 116, 0.2);
+    background-color: rgba(247, 147, 30, 0.15); /* subtle orange hover */
+    }
+
+    /* Title hover color */
+    .why-us-new .content:hover h4 {
+    color: #1F2674; /* Brand Indigo */
+    }
+
     
     @keyframes bounce {
         0%, 20%, 50%, 80%, 100% {
@@ -80,6 +109,47 @@
             transform: translateY(-6px);
         }
     }
+
+ /* ---------- Video Card ---------- */
+.video-card {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(31,38,116,.25);
+}
+
+/* ---------- Play Button Overlay ---------- */
+.play-btn {
+  --size: 70px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2rem;
+  z-index: 2;
+}
+.play-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  animation: pulse 1.8s ease-out infinite;
+}
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: 1; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+
 
     .big-header-container {
         /* overflow: hidden; */
@@ -109,7 +179,7 @@
         height: 100%;
         left: 8.5%;
         top: 0px;
-        background: #3a6fd9;
+        background: #1F2674;
         transform: skewX(25deg);
     }
 
@@ -120,7 +190,7 @@
         height: 100%;
         left: 5.1%;
         top: 0px;
-        background: #81aae7;
+        background: #F7931E;
         transform: skewX(25deg);
         box-shadow: inset 0px -1px 20px rgba(0, 0, 0, 22%);
     }
@@ -143,7 +213,7 @@
         height: 100%;
         left: 1.5%;
         top: 0px;
-        background: #3a6fd9;
+        background: #39B54A;
         transform: skewX(25deg);
         box-shadow: 0px -3px 13px rgba(0, 0, 0, 30%);
     }
@@ -164,12 +234,12 @@
         height: 70px;
         right: 18px;
         top: 0px;
-        background: #3a6fd9;
+        background: #1F2674;
         transform: skewX(25deg);
     }
 
     .big-header .big-header-menu>li {
-        background: #3a6fd9;
+        background: #1F2674;
     }
 
     .big-header .big-header-menu>li>a {
@@ -489,7 +559,7 @@
                         <div class="why-us-new">
                             <div class="row">
                                 <!-- Item 1 -->
-                                <div class="mb-4 col-sm-12 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                                <div class="mb-4 col-sm-12 col-md-6 col-lg-4 animate__animated animate__fadeInUp" data-wow-delay="100ms">
                                     <div class="content text-center px-3">
                                         <img loading="lazy" src="img/about-us/why-us/legacy-of-excellence.webp" class="mb-3" alt="Legacy">
                                         <h4 class="h5 fw-bold">Since 1976: Legacy of Trust</h4>
@@ -547,6 +617,57 @@
                 </div>
             </div>
         </section>
+
+       <!-- Corporate / About Section -->
+<section id="about-corporate" class="py-6 bg-light">
+  <div class="container">
+    <div class="row align-items-center justify-content-center g-5">
+
+      <!-- Video -->
+      <div class="col-lg-6" data-aos="zoom-in">
+        <div class="video-card shadow-lg rounded-4 overflow-hidden position-relative">
+          <!-- Play overlay -->
+          <a
+            href="https://www.youtube.com/embed/sPIkymBXzQA?si=Vi2NZ1TWf68scvx7&amp;autoplay=1"
+            class="play-btn"
+            aria-label="Play corporate video">
+            <i class="bi bi-play-fill"></i>
+          </a>
+
+          <!-- Ratio keeps it responsive -->
+          <div class="ratio ratio-16x9">
+            <iframe
+              loading="lazy"
+              src="https://www.youtube.com/embed/sPIkymBXzQA?si=Vi2NZ1TWf68scvx7"
+              title="Al Sharq corporate video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="display-6 fw-bold text-primary mb-3">
+          One Company, <span class="text-accent">Limitless Solutions</span>
+        </h2>
+
+        <p class="lead text-muted mb-4">
+          For over four decades we’ve fused world-class engineering with
+          unwavering quality to deliver flexible packaging that powers global brands.
+          From high-barrier films to eco-conscious laminates—everything is crafted
+          under one roof.
+        </p>
+
+        <p class="text-dark fw-semibold">
+          Cutting-edge equipment. Seamless workflows. Customer-first mindset.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
         <!-- Product Highlights -->
         <section class="pt-5 pb-5 bg-light">
@@ -899,6 +1020,9 @@ jQuery(function () {
     <!-- Tabs -->
     <script src="tab/js/jquery.easyResponsiveTabs.js"></script>
     <script src="tab/js/tab.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init({ once:true, offset:120, duration:800 });</script>
 
     <!-- WhatsApp Floating Button -->
     <a 

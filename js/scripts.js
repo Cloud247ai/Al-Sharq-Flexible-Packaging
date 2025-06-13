@@ -1,665 +1,407 @@
+/*!
+ *  script.js  –  Al Sharq Flexible Packaging
+ *  Brand-aligned animation + UI helpers
+ *  2025-06-13  |  Refactor by ChatGPT
+ *  ---------------------------------------------------
+ *  Palette
+ *  --clr-primary:  #1F2674;  /* dark indigo  */
+ *  --clr-accent :  #F7931E;  /* orange       */
+ *  --clr-green  :  #39B54A;  /* leaf green   */
+ *  ---------------------------------------------------
+ */
+
+/* eslint-env jquery */
+/* global Swiper, Waypoint, bootstrap, Masonry, AOS */
+
 (function ($) {
   "use strict";
 
-  /*-------------------------------------
-      Animation on scroll: Number rotator
-  -------------------------------------*/
-  $("[data-appear-animation]").each(function() {
-      var self      = $(this);
-      var animation = self.data("appear-animation");
-      var delay     = (self.data("appear-animation-delay") ? self.data("appear-animation-delay") : 0);        
- 
-          self.html('0');
-          self.waypoint(function(direction) {
-              if( !self.hasClass('completed') ){
-                  var from     = self.data('from');
-                  var to       = self.data('to');
-                  var interval = self.data('interval');
-                  self.numinate({
-                      format: '%counter%',
-                      from: from,
-                      to: to,
-                      runningInterval: 2000,
-                      stepUnit: interval,
-                      onComplete: function(elem) {
-                          self.addClass('completed');
-                      }
-                  });
-              }
-          }, { offset:'85%' });      
-  });
+  /* ============================================================
+     Utility: brand CSS variables (for easy future skin swaps)
+  ============================================================ */
+  const root = document.documentElement;
+  root.style.setProperty('--clr-primary', '#1F2674');
+  root.style.setProperty('--clr-accent',  '#F7931E');
+  root.style.setProperty('--clr-green',   '#39B54A');
 
-  /*-------------------------------------
-  Swiper Slider
-  -------------------------------------*/
-  var swiperslider = $(".swiper-slider");
-  var x = 1;
-  swiperslider.each(function () {  
-             var carouselElement	= $(this);
-             var header_area =  $(this).closest('section').find( '.pbmit-ele-header-area');
-              var columns = $(this).data('columns');
-              var loop = $(this).data('loop');
-              var autoplay2 = $(this).data('autoplay');
-              var autoplayspeed1 = $(this).data('autoplayspeed'); 
-              var val_nav = $(this).data('arrows');
-              var nav_arrow = $(this).data('arrows-class');                
-              var val_dots = $(this).data('dots');
-              var val_center = $(this).data('center');
-              var style = $(this).data('effect');
-              var loopSlide = null; 
-              var sl_speed = 2000; 
-              var c_counter = false;
+  /* ============================================================
+     1) Number Rotator  (Intersection Observer version)
+  ============================================================ */
+  const numElems = document.querySelectorAll('[data-appear-animation]');
+  if ('IntersectionObserver' in window && numElems.length) {
+    const numObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
 
-              carouselElement.addClass( 'pbmit-element-viewtype-carousel-' + x );
+        const self      = $(entry.target);
+        if (self.hasClass('completed')) return;
 
+        const from      = +self.data('from') || 0;
+        const to        = +self.data('to')   || 0;
+        const interval  = +self.data('interval') || 1;
+        const duration  = +self.data('speed') || 2000; // optional custom speed
 
-              if( columns === 1 ){ 
-                var responsive_items = [ /* 1199 : */ '1', /* 991 : */ '1', /* 767 : */ '1', /* 575 : */ '1', /* 0 : */ '1' ];
-              } else if( columns === 2 ||  columns === 2.3 ){ 
-                var responsive_items = [ /* 1199 : */ columns, /* 991 : */ '2', /* 767 : */ '2', /* 575 : */ '1', /* 0 : */ '1' ];
-              } else if( columns === 3 ||  columns === 3.5 ){
-                var responsive_items = [ /* 1199 : */ columns, /* 991 : */ '2', /* 767 : */ '2', /* 575 : */ '1', /* 0 : */ '1' ];
-              } else if( columns === 4||  columns === 4.5 ){
-                var responsive_items = [ /* 1199 : */ columns, /* 991 : */ '4', /* 767 : */ '3', /* 575 : */ '1', /* 0 : */ '1' ];
-              } else if( columns === 5 ){
-                var responsive_items = [ /* 1199 : */ '5', /* 991 : */ '4', /* 767 : */ '2', /* 575 : */ '1', /* 0 : */ '1' ];
-              } else if( columns === 6 ){
-                var responsive_items = [ /* 1199 : */ '6', /* 991 : */ '4', /* 767 : */ '3', /* 575 : */ '3', /* 0 : */ '1' ];
-              } else {
-                var responsive_items = [ /* 1199 : */ '3', /* 991 : */ '3', /* 767 : */ '1', /* 575 : */ '1', /* 0 : */ '1' ];
-              }
-
-			 
-			  if (autoplay2 !== true) {
-				 autoplay2 = false;
-			   } else{
-				autoplay2 =  { delay: 2000 };
-			   }
-
-
-			 
-				
-              if (val_dots === true) {
-                carouselElement.append('<div class="swiper-pagination swiper-pagination"></div>');
-              }
-              if ( jQuery(carouselElement).hasClass('pbmit-element-testimonial-style-2') ) {
-                  c_counter = true;
-                  var totalslide = jQuery(carouselElement).find('article:not(".swiper-slide-duplicate")').length;
-                  var cal = Math.round((1 * 100) / totalslide); 
-                  header_area.append('<div class="pbmit-fld-contents"><div class="pbmit-circle-outer" data-digit="' + cal + '" data-fill="#b8967e" data-emptyfill="#f6f6f6" data-before=""  data-thickness="2" data-size="100"><div class="pbmit-circle"><div class="pbmit-fid-inner"></div></div></div></div>');
-                   
-                  var elm = jQuery(carouselElement).closest('section').find( '.pbmit-circle');
-                  pbmit_circle_progressbar(); 
-                  setTimeout(function() { updatecircle(elm, 1, totalslide); }, 100);
-              }
-
-              if(val_nav === true){
-                 
-                if(!nav_arrow){
-                  carouselElement.append( '<div class="swiper-buttons"></div>' );
-                  carouselElement.find('.swiper-buttons').append( '<div class="swiper-button-next swiper-button-next-' + x + '"></div>' );
-                  carouselElement.find('.swiper-buttons').append( '<div class="swiper-button-prev swiper-button-prev-' + x + '"></div>' );
-                } else{             
-                  $('.' + nav_arrow).append( '<div class="swiper-buttons"></div>' );
-                  $('.' + nav_arrow).append( '<div class="swiper-button-next swiper-button-next-' + x + '"></div>' );
-                  $('.' + nav_arrow).append( '<div class="swiper-button-prev swiper-button-prev-' + x + '"></div>' );
-                }
-              }
-
-              var pagination_val = false;
-              if (val_dots === true) {
-                  pagination_val = {
-                      el: '.swiper-pagination',
-                      clickable: true,
-                  };
-              }
-              var navigation_val = false;
-              if(val_nav === true){
-                navigation_val =  {
-                  nextEl: '.swiper-button-next-' + x,
-                  prevEl: '.swiper-button-prev-' + x,
-                };
-              }
-
-
-              if(!style){
-                style = "slide";
-              }    
-              
-              var margin_val = 30;
-              if( $(carouselElement).data('margin') !== '' || $(carouselElement).data('margin') === '0'){
-                margin_val = $(carouselElement).data('margin');  
-              } 
-            
-              if(carouselElement.hasClass('marquee')){ 
-                var reverse_direction = $(this).data('reverse');
-                if (!reverse_direction) reverse_direction = false;
-                 var swiper2 = new Swiper( '.pbmit-element-viewtype-carousel-' + x, { 
-                   spaceBetween: 0,
-                   centeredSlides: true,
-                   speed: 5000,
-                   autoplay: {
-                       delay: 1,
-                       disableOnInteraction: true,
-                       reverseDirection: reverse_direction,
-                   },
-                   loop: true,
-                   slidesPerView: 'auto',
-                   allowTouchMove: false,
-                   disableOnInteraction: true
-               }); 
-
-              
-             } else{          
-              var numOfSlides;         
-            var swiper = new Swiper( '.pbmit-element-viewtype-carousel-' + x, { 
-                loop: loop, 
-                navigation: navigation_val,
-                pagination: pagination_val,
-                slidesPerView: columns,
-                spaceBetween: margin_val,
-                loopedSlides: loopSlide, 
-                effect: style,
-				autoplay:autoplay2,
-                speed: sl_speed, 
-                grabCursor: false,
-                centeredSlides: val_center,
-                breakpoints		  : {
-                  1199 : {
-                    slidesPerView	: responsive_items[0],
-                  },
-                  991	 : {					
-                    slidesPerView	: responsive_items[1],
-                  },
-                  767	 : {
-                    slidesPerView	: responsive_items[2],
-                  },
-                  575	 : {
-                    slidesPerView	: responsive_items[3],
-                  },
-                  0	 : {
-                    slidesPerView	: responsive_items[4],
-                  }
-                             
-              },
-              on: {
-                slideChange: function(swiper) {
-                    if (c_counter) { 
-                        var elm = jQuery(carouselElement).closest('section').find( '.pbmit-circle');
-                        var current = swiper.realIndex + 1;
-                        updatecircle(elm, current, numOfSlides);
-                    }
-                },
-                beforeInit: function(){
-                    numOfSlides = jQuery('.pbmit-element-viewtype-carousel-' + x + ' .swiper-slide').length;
-                }
-              }
-            }); 
-            if (jQuery('.pbmit-element-viewtype-carousel-' + x).hasClass('pbmit-element-testimonial-style-1') || jQuery('.pbmit-element-viewtype-carousel-' + x).hasClass('pbmit-element-testimonial-style-2') || jQuery('.pbmit-element-viewtype-carousel-' + x).hasClass('pbmit-element-testimonial-style-10')) {
-                var pbmit_var = jQuery('.pbmit-element-viewtype-carousel-' + x);                 
-                pbmit_var.find('.swiper-button-next').attr('data-cursor-text', '<i class="pbmit-base-icon-right-open"></i>');
-                pbmit_var.find('.swiper-button-prev').attr('data-cursor-text', '<i class="pbmit-base-icon-left-open"></i>');
+        /* numinate replacement (tiny) */
+        $({ Counter: from }).animate(
+          { Counter: to },
+          {
+            duration,
+            easing: 'swing',
+            step(now) {
+              self.text(Math.floor(now));
+            },
+            complete() {
+              self.text(to);
+              self.addClass('completed');
+              obs.unobserve(entry.target);
             }
-
           }
-            x = x + 1;             
-        });
-    function updatecircle(elm, cr, tl) {
-        var cal = getpercentage(tl, cr, elm); 
-        var short_digit = cal / 100;
-        elm.circleProgress('value', short_digit);
-    }
-
-  
-
-/* ====================================== */
-/* Circle Progress bar
-/* ====================================== */
- function pbmit_circle_progressbar() {
-
-  jQuery('.pbmit-circle-outer').each(function() {
-
-      var this_circle = jQuery(this);
-
-      // Circle settings
-      var emptyFill_val = "rgba(0, 0, 0, 0)";
-      var thickness_val = 10;
-      var fill_val = this_circle.data('fill');
-      var size_val = 110;
-
-      if (typeof this_circle.data('emptyfill') !== 'undefined' && this_circle.data('emptyfill') != '') {
-          emptyFill_val = this_circle.data('emptyfill');
-      }
-      if (typeof this_circle.data('thickness') !== 'undefined' && this_circle.data('thickness') != '') {
-          thickness_val = this_circle.data('thickness');
-      }
-      if (typeof this_circle.data('size') !== 'undefined' && this_circle.data('size') != '') {
-          size_val = this_circle.data('size');
-      }
-      if (typeof this_circle.data('filltype') !== 'undefined' && this_circle.data('filltype') == 'gradient') {
-          fill_val = { gradient: [this_circle.data('gradient1'), this_circle.data('gradient2')], gradientAngle: Math.PI / 4 };
-      }
-
-      if (typeof jQuery.fn.circleProgress == "function") {
-          var digit = this_circle.data('digit');
-          var before = this_circle.data('before');
-          var after = this_circle.data('after');
-          var digit = Number(digit);
-          var short_digit = (digit / 100);
-
-          jQuery('.pbmit-circle', this_circle).circleProgress({
-              value: 0,
-              size: size_val,
-              startAngle: -Math.PI / 4 * 2,
-              thickness: thickness_val,
-              emptyFill: emptyFill_val,
-              fill: fill_val
-          }).on('circle-animation-progress', function(event, progress, stepValue) { // Rotate number when animating
-              this_circle.find('.pbmit-circle-number').html(before + Math.round(stepValue * 100) + after);
-          });
-      }
-
-      this_circle.waypoint(function(direction) {
-          if (!this_circle.hasClass('completed')) {
-              // Re draw when view
-              if (typeof jQuery.fn.circleProgress == "function") {
-                  jQuery('.pbmit-circle', this_circle).circleProgress({ value: short_digit });
-              };
-              this_circle.addClass('completed');
-          }
-      }, { offset: '85%' });
-
-  });
-} 
-
-   /*-------------------------------------
-    Contact form validator
-    -------------------------------------*/
-    
-    if ( $.isFunction($.fn.validate) ) {
-      $("#contact-form").validate();
-    }
-
-
-    /*-------------------------------------
-     Send email via Ajax
-   Make sure you configure send.php file 
-     -------------------------------------*/
-    $("#contact-form").submit(function(){
- 
-   if( $("#contact-form .doing-via-ajax").length == 0 ){
-     $("#contact-form").prepend('<input class="doing-via-ajax" type="hidden" name="doing-via-ajax" value="yes" />');;
-   }
- 
-   if( $("#contact-form").valid() ){  // check if form is valid
- 
-     $(".contact-form .message-status").html('');
-     $('.form-btn-loader').removeClass('d-none');
-     $('.contact-form button.pbmit-btn span').hide();
-     $('.contact-form button.pbmit-btn').attr("disabled", "disabled");
- 
-     $.ajax( {
-       type: "POST",
-       url: "send.php",
-       data:$('#contact-form').serialize(),
-       success: function(cevap) {
-         $('.form-btn-loader').addClass('d-none');
-         $('.contact-form button.pbmit-btn span').show();
-         $(".contact-form button.pbmit-btn").removeAttr("disabled");
-         $(".contact-form .message-status").html(cevap);
-       }
-     });
-     
-   }
- 
-   return false;
- 
-   });
-
-  /*-------------------------------------
-    Masonry
-  -------------------------------------*/
- 
-	if (jQuery('.pbmit-element-viewtype-masonry').length > 0) {
-		jQuery('.pbmit-element-viewtype-masonry').each(function() {
-
-			var main_ele = jQuery(this); 			
-			// init Masonry
-			let $grid = jQuery('.pbmit-element-posts-wrapper', main_ele).masonry({
-				 
-				itemSelector: '.pbmit-blog-style-4, .pbmit-portfolio-style-2',
-				columnWidth: '.pbmit-blog-style-4, .pbmit-portfolio-style-2',
-				gutter: 0,
-				percentPosition: true,
-				stagger: 30,
-				// nicer reveal transition
-				visibleStyle: { transform: 'translateY(0)', opacity: 1 },
-				hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
-				horizontalOrder: true
-			});
-			 
-		}
-		)};
-
-  /*-------------------------------------
-  ProgressBar
-  -------------------------------------*/
-  // AOS.init({
-  //   once: true,
-  // });
-
-     /*-------------------------------------
-  Scroll To Top
-  -------------------------------------*/
-
-  var pbmit_back_to_top = function() {
-    var progressPath = document.querySelector('.pbmit-progress-wrap path');
-      var pathLength = progressPath.getTotalLength();
-      progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-      progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-      progressPath.style.strokeDashoffset = pathLength;
-      progressPath.getBoundingClientRect();
-      progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-      var updateProgress = function() {
-          var scroll = jQuery(window).scrollTop();
-          var height = jQuery(document).height() - jQuery(window).height();
-          var progress = pathLength - (scroll * pathLength / height);
-          progressPath.style.strokeDashoffset = progress;
-      }
-      updateProgress();
-      jQuery(window).scroll(updateProgress);
-      var offset = 50;
-      var duration = 550;
-      jQuery(window).on('scroll', function() {
-          if (jQuery(this).scrollTop() > offset) {
-              jQuery('.pbmit-progress-wrap').addClass('active-progress');
-          } else {
-              jQuery('.pbmit-progress-wrap').removeClass('active-progress');
-          }
+        );
       });
-      jQuery('.pbmit-progress-wrap').on('click', function(event) {
-          event.preventDefault();
-          jQuery('html, body').animate({ scrollTop: 0 }, duration);
-          return false;
-      })
-  }
-  pbmit_back_to_top();
+    }, { rootMargin: '0px 0px -15% 0px' });
 
-
-  /* Static Box Slider */
-var pbmit_staticbox_hover_slide = function() {
-	if (typeof Swiper !== 'undefined') {
-		var pbmit_hover1 = new Swiper(".pbmit-static-image", {
-			grabCursor: true,
-			effect: "slide",
-			allowTouchMove: false,
-			slidesPerView:1
-		});
-		var pbmit_hover2 = new Swiper(".pbmit-hover-short-desc", {
-			grabCursor: true,
-			effect: "creative",
-			creativeEffect: {
-				prev: {
-					translate: [0, "-170%", 1],
-				},
-				next: {
-					translate: [0, "100%", 0],
-				},
-			},
-			allowTouchMove: false
-		});
-		jQuery('.pbmit-main-static-slider li').hover(function(e) {
-			e.preventDefault();
-			var myindex = jQuery(this).index();
-			pbmit_hover1.slideTo(myindex, 500, false);
-			pbmit_hover2.slideTo(myindex, 500, false);
-		});
-	}
-}
-pbmit_staticbox_hover_slide();
-
-var pbmit_hover_slide = function() {
-	if (typeof Swiper !== 'undefined') {
-		var pbmit_hover = new Swiper(".pbmit-hover-image", {
-			grabCursor: true,
-			effect: "slide",
-			allowTouchMove: false
-		});		
-	}
-	jQuery('.pbmit-main-hover-slider li').hover(function(e) {
-		e.preventDefault();
-		var myindex = jQuery(this).index();
-		pbmit_hover.slideTo(myindex, 500, false);
-	});
-}
-pbmit_hover_slide();
-var pbmit_service_bg_hover = function() {
-	var pbmit_hover;
-	if (typeof Swiper !== 'undefined') {
-		pbmit_hover = new Swiper(".pbmit-hover-image-faded", {
-			speed: 6000,
-			effect: 'fade',
-		});
-	}
-	jQuery('.pbmit-main-hover-faded li').hover(function(e) {
-		e.preventDefault();
-		var myindex = jQuery(this).index();
-		pbmit_hover.slideTo(myindex, 1000, false);
-	});
-}
-pbmit_service_bg_hover();
-  /*-------------------------------------
-  Header Search Form
-  -------------------------------------*/
-  $( ".pbmit-header-search-btn a" ).on('click', function() {     
-    $(".pbmit-search-overlay").addClass('st-show');
-    $("body").addClass('st-prevent-scroll');            
-    return false;
-  });   
-  $( ".pbmit-search-close").on('click', function() {
-        $(".pbmit-search-overlay").removeClass('st-show');
-      $("body").removeClass('st-prevent-scroll');            
-      return false;
-  }); 
-  $('.pbmit-site-searchform').on('click', function(event){
-    event.stopPropagation();
-  });
-
-  	 /*-------------------------------------
-    Stretched Div
-    -------------------------------------*/ 	
-    var document_width = $(document).width();
-      function pbmit_col_stretched(){
-        $('.pbmit-col-stretched-yes').each(function() {
-          var this_ele = $(this);
-          var window_width = jQuery(window).width();
-          var main_width = $('.container').width();
-          var extra_width = ((window_width - main_width) / 2);  
-          if (window_width < 1200){
-            extra_width = 0;
-          }
-          if (this_ele.hasClass('pbmit-col-right')) { 
-            $('.pbmit-col-stretched-right', this_ele).css('margin-right', '-' + extra_width + 'px'); 
-          } else { 
-            $('.pbmit-col-stretched-left', this_ele).css('margin-left', '-' + extra_width + 'px'); 
-          }
-        });
-      }
-      $(window).resize(function(){
-        pbmit_col_stretched();
-      });
-      pbmit_col_stretched();
-  
-  /*-------------------------------------
-  Count Down
-  -------------------------------------*/ 
-
-  if( $('#clock').length>0 ){
-    $('#clock').countdown('2024/10/10', function(event) {
-      $(this).html(event.strftime(''
-      + '<div class="conut-time"><span class="time_left">86</span><span class="time_description">Day%!d </span></div>'
-      + '<div class="conut-time"><span class="time_left">05</span><span class="time_description"> Hours </span></div> '
-      + '<div class="conut-time"><span class="time_left">33</span><span class="time_description"> Minutes </span></div>'
-      + '<div class="conut-time"><span class="time_left">%S</span><span class="time_description"> Seconds </span></div>'
-      ));
+    numElems.forEach(el => {
+      el.innerHTML = '0';
+      numObserver.observe(el);
     });
   }
 
-  /*-------------------------------------
-  Count Down
-  -------------------------------------*/ 
-  $( ".active-onhover .pbmit-ihbox-style-7:nth-child(2) ,.pbmit-portfolio-style-7:first-child , .pbmit-ihbox-style-14:nth-child(2) ,.pbmit-miconheading-style-16:nth-child(2), .pbmit-service-style-13:nth-child(2)" ).addClass('pbmit-mihbox-hover-active');
-  
-    $( ".active-onhover .pbmit-ihbox-style-7 , .pbmit-portfolio-style-7 , .pbmit-ihbox-style-14 , .pbmit-miconheading-style-16, .pbmit-service-style-13" ).mouseover(function() {
-      var main_row = $( this ).closest( '.active-onhover' );
-      $('.pbmit-ihbox-style-7 , .pbmit-portfolio-style-7 ,.pbmit-ihbox-style-14 , .pbmit-miconheading-style-16, .pbmit-service-style-13', main_row).removeClass('pbmit-mihbox-hover-active'); 
-      $(this).addClass('pbmit-mihbox-hover-active');
-    }).mouseout(function() {
-      var main_row = $( this ).closest( '.active-onhover' );
-      $('.pbmit-ihbox-style-7 , .pbmit-portfolio-style-7 ,.pbmit-miconheading-style-16 ,.pbmit-ihbox-style-14 ,.pbmit-service-style-13', main_row).removeClass('pbmit-mihbox-hover-active');
-      $('.pbmit-ihbox-style-7:nth-child(2) , .pbmit-portfolio-style-7:first-child ,.pbmit-ihbox-style-14:nth-child(2) , .pbmit-miconheading-style-16:nth-child(2) ,.pbmit-service-style-13:nth-child(2)', main_row).addClass('pbmit-mihbox-hover-active');
-     
-    });
+  /* ============================================================
+     2) Swiper Sliders
+  ============================================================ */
+  let swiperCount = 1;
+  $('.swiper-slider').each(function () {
+    const $carousel   = $(this);
+    const headerArea  = $carousel.closest('section').find('.pbmit-ele-header-area');
 
-  /*-------------------------------------
-    tooltip
-  -------------------------------------*/
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-    
-  /*-------------------------------------
-    Mobile Menu
-  -------------------------------------*/     
-  $('.navbar-toggler,.closepanel').on('click', function () { 
-    jQuery("header").toggleClass("active");
-  }); 
+    // Basic dataset extraction
+    const columns       = +$carousel.data('columns')  || 1;
+    const loop          = !!$carousel.data('loop');
+    const autoplayRaw   = $carousel.data('autoplay');
+    const speed         = +$carousel.data('autoplayspeed') || 3000;
+    const arrows        = !!$carousel.data('arrows');
+    const arrowsClass   = $carousel.data('arrows-class');
+    const dots          = !!$carousel.data('dots');
+    const center        = !!$carousel.data('center');
+    const effect        = $carousel.data('effect') || 'slide';
+    const margin        = ($carousel.data('margin') !== undefined) ? +$carousel.data('margin') : 30;
 
-  /*-------------------------------------
-  Magnific Popup
-  -------------------------------------*/
-  var i_type = 'image';
-  $('.pbmin-lightbox-video, .pbmin-lightbox-video a, a.pbmit-lightbox').each(function(){
-      if( $(this).hasClass('pbmin-lightbox-video')){ 
-        i_type = 'iframe';
+    $carousel.addClass(`pbmit-element-viewtype-carousel-${swiperCount}`);
+
+    /* Responsive column map */
+    const resp = (() => {
+      switch (columns) {
+        case 1:  return [1, 1, 1, 1, 1];
+        case 2:
+        case 2.3: return [columns, 2, 2, 1, 1];
+        case 3:
+        case 3.5: return [columns, 2, 2, 1, 1];
+        case 4:
+        case 4.5: return [columns, 4, 3, 1, 1];
+        case 5:  return [5, 4, 2, 1, 1];
+        case 6:  return [6, 4, 3, 3, 1];
+        default: return [3, 3, 1, 1, 1];
+      }
+    })();
+
+    /* Autoplay config */
+    const autoplay = autoplayRaw ? { delay: speed, disableOnInteraction: false } : false;
+
+    /* Dots */
+    let pagination = false;
+    if (dots) {
+      $carousel.append('<div class="swiper-pagination"></div>');
+      pagination = { el: '.swiper-pagination', clickable: true };
+    }
+
+    /* Arrows */
+    let navigation = false;
+    if (arrows) {
+      if (arrowsClass) {
+        $(`.${arrowsClass}`)
+          .append(`<div class="swiper-button-next swiper-button-next-${swiperCount}"></div>`)
+          .append(`<div class="swiper-button-prev swiper-button-prev-${swiperCount}"></div>`);
       } else {
-        i_type = 'image';
-      }  
-      $(this).magnificPopup({type:i_type});
-  });   
+        $carousel.append('<div class="swiper-buttons"></div>');
+        $carousel.find('.swiper-buttons')
+          .append(`<div class="swiper-button-next swiper-button-next-${swiperCount}"></div>`)
+          .append(`<div class="swiper-button-prev swiper-button-prev-${swiperCount}"></div>`);
+      }
+      navigation = {
+        nextEl: `.swiper-button-next-${swiperCount}`,
+        prevEl: `.swiper-button-prev-${swiperCount}`
+      };
+    }
 
-     /*-------------------------------------
-  Magnific Popup
-  -------------------------------------*/
-    $('.pbmit-nav-menu-toggle').on('click', function() {
-      $(".floting-bar-wrap").toggleClass("active");
-    })
-    $('.floting-bar-wrap .closepanel').on('click', function() {
-      $(".floting-bar-wrap").toggleClass("active");
+    /* Initialize Swiper */
+    const swiper = new Swiper(`.pbmit-element-viewtype-carousel-${swiperCount}`, {
+      loop,
+      effect,
+      autoplay,
+      speed: 900, // slide transition speed
+      slidesPerView: columns,
+      centeredSlides: center,
+      spaceBetween: margin,
+      pagination,
+      navigation,
+      breakpoints: {
+        1199: { slidesPerView: resp[0] },
+        991 : { slidesPerView: resp[1] },
+        767 : { slidesPerView: resp[2] },
+        575 : { slidesPerView: resp[3] },
+        0   : { slidesPerView: resp[4] }
+      }
     });
 
-  /*-------------------------------------
-   Accordion
-  -------------------------------------*/
+    /* Testimonial-specific circular counter */
+    if ($carousel.hasClass('pbmit-element-testimonial-style-2')) {
+      const totalSlides = $carousel.find('article:not(".swiper-slide-duplicate")').length;
+      const calcPercent = Math.round((1 * 100) / totalSlides);
 
-  $('.accordion .accordion-item').on('click', function () { 
-    var e = $(this);  
-    $(this).parent().find('.accordion-item').removeClass('active');        
-    if(!$(this).find('.accordion-button').hasClass('collapsed')){
-      $(this).addClass('active');
-    }  
-  }); 
+      headerArea.append(
+        `<div class="pbmit-fld-contents">
+          <div class="pbmit-circle-outer"
+               data-digit="${calcPercent}"
+               data-fill="var(--clr-accent)"
+               data-emptyfill="#f6f6f6"
+               data-thickness="2"
+               data-size="100">
+              <div class="pbmit-circle"><div class="pbmit-fid-inner"></div></div>
+          </div>
+        </div>`
+      );
+      pbmit_circle_progressbar(); // init (defined later)
 
-  /*-------------------------------------
-    Add plus icon in menu
-    -------------------------------------*/
-  $( ".main-menu ul.navigation li.dropdown").append( "<span class='righticon'><i class='pbmit-base-icon-angle-right'></i></span>" );
-  
-  /*-------------------------------------
-  Responsive Menu
-  -------------------------------------*/ 
-  $('.main-menu ul.navigation li.dropdown .righticon').on('click', function() {
-         $(this).siblings().toggleClass('open');
-         $(this).find('i').toggleClass('pbmit-base-icon-angle-right ti-angle-up');
-         return false;
-  });  
-
-    /*-------------------------------------
-    Sortable Div
-    -------------------------------------*/
-
-    jQuery('.pbmit-sortable-yes').each(function(){ 
-      var boxes = jQuery('.pbmit-element-posts-wrapper', this ); 
-      var links = jQuery('.pbmit-sortable-list a', this ); 
-      boxes.isotope({ animationEngine : 'best-available'}); 
-      links.on('click', function(e){  
-        var selector = jQuery(this).data('sortby'); 
-        if( selector != '*' ){ 
-          var selector = '.' + selector; 
-        } 
-        boxes.isotope({ filter : selector, itemSelector : '.pbmit-ele', layoutMode : 'fitRows' }); 
-        links.removeClass('pbmit-selected');
-        jQuery(this).addClass('pbmit-selected');
-        e.preventDefault(); 
+      swiper.on('slideChange', () => {
+        const current = swiper.realIndex + 1;
+        const $circle = $carousel.closest('section').find('.pbmit-circle');
+        updatecircle($circle, current, totalSlides);
       });
-    }); 
-
-  /*-------------------------------------
-  Circle Progressbar
-  -------------------------------------*/
-  $('.pbmit-circle-outer').each(function() {
-
-    var this_circle = $(this);
-
-    // Circle settings
-    var emptyFill_val = "rgba(0, 0, 0, 0)";
-    var thickness_val = 10;
-    var fill_val = this_circle.data('fill');
-    var size_val = 110;
-
-    if (typeof this_circle.data('emptyfill') !== 'undefined' && this_circle.data('emptyfill') !== '') {
-        emptyFill_val = this_circle.data('emptyfill');
-    }
-    if (typeof this_circle.data('thickness') !== 'undefined' && this_circle.data('thickness') !== '') {
-        thickness_val = this_circle.data('thickness');
-    }
-    if (typeof this_circle.data('size') !== 'undefined' && this_circle.data('size') !== '') {
-        size_val = this_circle.data('size');
-    }
-    if (typeof this_circle.data('filltype') !== 'undefined' && this_circle.data('filltype') === 'gradient') {
-        fill_val = { gradient: [this_circle.data('gradient1'), this_circle.data('gradient2')], gradientAngle: Math.PI / 4 };
     }
 
-    if (typeof $.fn.circleProgress === "function") {
-        var digit = this_circle.data('digit');
-        var before = this_circle.data('before');
-        var after = this_circle.data('after');
-        var digit = Number(digit);
-        var short_digit = (digit / 100);
+    ++swiperCount;
+  });
 
-        $('.pbmit-circle', this_circle).circleProgress({
-            value: 0,
-            size: size_val,
-            startAngle: -Math.PI / 4 * 2,
-            thickness: thickness_val,
-            emptyFill: emptyFill_val,
-            fill: fill_val
-        }).on('circle-animation-progress', function(event, progress, stepValue) { // Rotate number when animating
-            this_circle.find('.pbmit-circle-number').html(before + Math.round(stepValue * 100) + after);
+  function updatecircle($elm, current, total) {
+    const percent = getpercentage(total, current, $elm);
+    $elm.circleProgress('value', percent / 100);
+  }
+
+  function getpercentage(total, current /*, $elm */) {
+    return Math.round((current * 100) / total);
+  }
+
+  /* ============================================================
+     3) Circle Progress Bars  (brand defaults)
+  ============================================================ */
+  function pbmit_circle_progressbar() {
+    $('.pbmit-circle-outer').each(function () {
+      const $outer = $(this);
+      const emptyFill = $outer.data('emptyfill') || 'rgba(0,0,0,0)';
+      const thickness = +$outer.data('thickness') || 10;
+      const digit     = +$outer.data('digit') || 0;
+      const size      = +$outer.data('size') || 110;
+      let fillVal     = $outer.data('fill') || 'var(--clr-accent)';
+
+      /* gradient option */
+      if ($outer.data('filltype') === 'gradient') {
+        fillVal = {
+          gradient: [$outer.data('gradient1'), $outer.data('gradient2')],
+          gradientAngle: Math.PI / 4
+        };
+      }
+
+      if ($.fn.circleProgress) {
+        $outer.find('.pbmit-circle').circleProgress({
+          value: 0,
+          size,
+          startAngle: -Math.PI / 2,
+          thickness,
+          emptyFill,
+          fill: fillVal
         });
+      }
+
+      /* animate on view */
+      new Waypoint({
+        element: this,
+        handler(direction) {
+          if (direction === 'down' && !$outer.hasClass('completed')) {
+            if ($.fn.circleProgress) {
+              $outer.find('.pbmit-circle').circleProgress({ value: digit / 100 });
+            }
+            $outer.addClass('completed');
+          }
+        },
+        offset: '85%'
+      });
+    });
+  }
+  pbmit_circle_progressbar();
+
+  /* ============================================================
+     4) Back-to-top with brand accent stroke
+  ============================================================ */
+  const backToTop = () => {
+    const $wrap = $('.pbmit-progress-wrap');
+    if (!$wrap.length) return;
+
+    const path   = $wrap.find('path')[0];
+    const length = path.getTotalLength();
+    path.style.transition = path.style.WebkitTransition = 'none';
+    path.style.stroke = 'var(--clr-accent)';
+    path.style.strokeDasharray = `${length} ${length}`;
+    path.style.strokeDashoffset = length;
+    path.getBoundingClientRect();
+    path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+    const update = () => {
+      const scroll = $(window).scrollTop();
+      const height = $(document).height() - $(window).height();
+      const progress = length - (scroll * length / height);
+      path.style.strokeDashoffset = progress;
+    };
+    update();
+    $(window).scroll(update);
+
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 50) {
+        $wrap.addClass('active-progress');
+      } else {
+        $wrap.removeClass('active-progress');
+      }
+    });
+
+    $wrap.on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 600);
+    });
+  };
+  backToTop();
+
+  /* ============================================================
+     5) AOS (Animate On Scroll) global init (once)
+  ============================================================ */
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      once: true,
+      offset: 120,
+      duration: 700
+    });
+  }
+
+  /* ============================================================
+     6) Header Search Overlay
+  ============================================================ */
+  $('.pbmit-header-search-btn a').on('click', function () {
+    $('.pbmit-search-overlay').addClass('st-show');
+    $('body').addClass('st-prevent-scroll');
+    return false;
+  });
+  $('.pbmit-search-close').on('click', function () {
+    $('.pbmit-search-overlay').removeClass('st-show');
+    $('body').removeClass('st-prevent-scroll');
+    return false;
+  });
+  $('.pbmit-site-searchform').on('click', function (e) { e.stopPropagation(); });
+
+  /* ============================================================
+     7) Mobile menu toggle
+  ============================================================ */
+  $('.navbar-toggler,.closepanel').on('click', () => $('header').toggleClass('active'));
+
+  /* ============================================================
+     8) Tooltip bootstrap init
+  ============================================================ */
+  (() => {
+    const tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltips.map(el => new bootstrap.Tooltip(el));
+  })();
+
+  /* ============================================================
+     9) Masonry grids
+  ============================================================ */
+  $('.pbmit-element-viewtype-masonry').each(function () {
+    const $grid = $('.pbmit-element-posts-wrapper', this).masonry({
+      itemSelector: '.pbmit-blog-style-4, .pbmit-portfolio-style-2',
+      columnWidth: '.pbmit-blog-style-4, .pbmit-portfolio-style-2',
+      gutter: 0,
+      percentPosition: true,
+      stagger: 30,
+      visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+      hiddenStyle : { transform: 'translateY(100px)', opacity: 0 },
+      horizontalOrder: true
+    });
+    $(this).data('masonryGrid', $grid);
+  });
+
+  /* ============================================================
+     10) Isotope Sortables
+  ============================================================ */
+  $('.pbmit-sortable-yes').each(function () {
+    const $wrapper = $('.pbmit-element-posts-wrapper', this);
+    const $links   = $('.pbmit-sortable-list a', this);
+
+    $wrapper.isotope({ animationEngine: 'best-available' });
+
+    $links.on('click', function (e) {
+      e.preventDefault();
+      const sort = $(this).data('sortby');
+      const filter = sort === '*' ? '*' : `.${sort}`;
+      $wrapper.isotope({ filter });
+      $links.removeClass('pbmit-selected');
+      $(this).addClass('pbmit-selected');
+    });
+  });
+
+  /* ============================================================
+     11) Accordion icon helpers
+  ============================================================ */
+  $('.accordion .accordion-item').on('click', function () {
+    const $group = $(this).parent();
+    $group.find('.accordion-item').removeClass('active');
+    if (!$(this).find('.accordion-button').hasClass('collapsed')) {
+      $(this).addClass('active');
     }
-    
-    this_circle.waypoint(function(direction) {
-        if (!this_circle.hasClass('completed')) {
-            // Redraw when view
-            if (typeof $.fn.circleProgress === "function") {
-                $('.pbmit-circle', this_circle).circleProgress({ value: short_digit });
-            };
-            this_circle.addClass('completed');
-        }
-    }, { offset: '85%' });
+  });
 
-});
+  /* ============================================================
+     12) Bootstrap tooltip refresh on AJAX load, etc.
+  ============================================================ */
+  $(document).ajaxComplete(() => {
+    $('[data-bs-toggle="tooltip"]').tooltip('dispose').tooltip();
+  });
 
-});
+  /* ============================================================
+     13) Placeholder: contact form validation & AJAX mailer
+  ============================================================ */
+  if ($.isFunction($.fn.validate)) {
+    $('#contact-form').validate();
+  }
+  $('#contact-form').on('submit', function () {
+    if ($('#contact-form .doing-via-ajax').length === 0) {
+      $(this).prepend('<input class="doing-via-ajax" type="hidden" name="doing-via-ajax" value="yes" />');
+    }
+    if (!$('#contact-form').valid()) return false;
+
+    $('.contact-form .message-status').empty();
+    $('.form-btn-loader').removeClass('d-none');
+    $('.contact-form button.pbmit-btn span').hide();
+    $('.contact-form button.pbmit-btn').prop('disabled', true);
+
+    $.post('send.php', $(this).serialize(), (resp) => {
+      $('.form-btn-loader').addClass('d-none');
+      $('.contact-form button.pbmit-btn span').show();
+      $('.contact-form button.pbmit-btn').prop('disabled', false);
+      $('.contact-form .message-status').html(resp);
+    });
+
+    return false;
+  });
+
+  /* ============================================================
+     14) End – console welcome
+  ============================================================ */
+  // eslint-disable-next-line no-console
+  console.info('%c Al Sharq Flexible Packaging scripts loaded. ', 'background: #1F2674; color: #fff; padding: 2px 6px;');
+})(jQuery);

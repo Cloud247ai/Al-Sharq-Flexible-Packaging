@@ -154,7 +154,7 @@ select {
 
 .my-custom-modal .modal-title {
     text-align: center;
-    background: #3a6fd9;
+    background: #1F2674;
     color: #ffff;
     margin: 0px !important;
     padding: 10px 0px!important;
@@ -385,7 +385,7 @@ span.icon-button i {
 }
 
 .my-custom-modal .submitbutton {
-    background: #3a6fd9;
+    background: #1F2674;
     position: relative;
     z-index: 1;
     border: 0px;
